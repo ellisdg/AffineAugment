@@ -90,14 +90,20 @@ def rotate_z(theta, dtype=torch.float32):
 
 
 def shear(params, shape, dtype=torch.float32):
+    shape = torch.tensor(shape, dtype=torch.float32)
+    # translate the origin to the center of the image
+    center = translate(*-1 * ((shape - 1) / 2), dtype=dtype)
+
+    # shear
     affine = torch.tensor([[1, params[0], params[1], 0],
                          [params[2], 1, params[3], 0],
                          [params[4], params[5], 1, 0],
                          [0, 0, 0, 1]], dtype=dtype)
-    # adjust the origin
-    affine[:3, 3] = affine[:3, 3] - (1/2) * ((torch.tensor(shape, dtype=torch.float32) - 1) *
-                                             (affine @ torch.tensor([1, 1, 1, 0], dtype=torch.float32) - 1)[:3])
-    return affine
+
+    # translate the origin back to the corner of the image
+    goback = translate(*((shape - 1) / 2), dtype=dtype)
+
+    return goback @ affine @ center
 
 
 def flip(flip_params, shape):

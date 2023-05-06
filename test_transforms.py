@@ -87,7 +87,7 @@ class TestTransforms(unittest.TestCase):
         affine_flip = augment(self.image.affine, flip_params=flip_params, shape=self.image.shape[1:])
         self.assertTrue(torch.allclose(monai_flip.affine, affine_flip, atol=1e-5))
 
-    def test_shear_x(self):
+    def test_shear(self):
         shear_params = torch.rand(6)
         # Again, I need to clone the image because the Affine transform modifies the image in place
         monai_shear, _ = Affine(shear_params=shear_params.tolist())(self.image.detach().clone())
