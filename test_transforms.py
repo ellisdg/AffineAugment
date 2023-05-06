@@ -1,4 +1,4 @@
-from monai.transforms import Rotate, Zoom, Flip, Crop, Affine
+from monai.transforms import Rotate, Zoom, Flip, Affine
 from monai.data import MetaTensor
 import torch
 from affine import augment
@@ -54,6 +54,16 @@ class TestTransforms(unittest.TestCase):
 
         self.assertTrue(torch.allclose(monai_zoom.affine, affine_zoom))
 
+    def test_simple_flip(self):
+        # Make sure that a 1x1x1 image with origin 0,0,0 will still have its origin at 0,0,0 after flipping
+        flip_params = torch.tensor([True, True, True])
+        image = MetaTensor(torch.rand(1, 1, 1, 1), affine=torch.eye(4))
+        monai_flip = Flip()(image)
+        assert torch.all(monai_flip.affine[:3, 3] == 0)
+        affine_flip = augment(image.affine, flip_params=flip_params, shape=image.shape[1:])
+        print(affine_flip)
+        assert torch.all(affine_flip[:3, 3] == 0)
+
     def test_flip_x(self):
         flip_params = torch.tensor([True, False, False])
         monai_flip = Flip(0)(self.image)
@@ -77,4 +87,14 @@ class TestTransforms(unittest.TestCase):
         monai_flip = Flip()(self.image)
         affine_flip = augment(self.image.affine, flip_params=flip_params, shape=self.image.shape[1:])
         self.assertTrue(torch.allclose(monai_flip.affine, affine_flip))
+
+    def test_shear_x(self):
+        shear_params = torch.tensor([2, 1, 5, 7, 9, -0.5])
+        self.image.affine = torch.eye(4)
+        # Again, I need to clone the image because the Affine transform modifies the image in place
+        monai_shear, _ = Affine(shear_params=shear_params.tolist())(self.image.detach().clone())
+        affine_shear = augment(self.image.affine, shear_params=shear_params, shape=self.image.shape[1:])
+        print(monai_shear.affine)
+        print(affine_shear)
+        self.assertTrue(torch.allclose(monai_shear.affine, affine_shear))
 

@@ -23,9 +23,9 @@ def create_augmentation_transforms(translate_params=None, scale_params=None, rot
             raise ValueError("shape must be provided if rotate_params are provided")
         transforms.append(rotate(rotate_params, torch.tensor(shape)))
     if shear_params is not None:
-        transforms.append(shear_x(*shear_params[0]))
-        transforms.append(shear_y(*shear_params[1]))
-        transforms.append(shear_z(*shear_params[2]))
+        if shape is None:
+            raise ValueError("shape must be provided if shear_params are provided")
+        transforms.append(shear(shear_params, shape))
     if flip_params is not None:
         if shape is None:
             raise ValueError("shape must be provided if flip_params are provided")
@@ -89,25 +89,15 @@ def rotate_z(theta, dtype=torch.float32):
                          [0, 0, 0, 1]], dtype=dtype)
 
 
-def shear_x(y, z, dtype=torch.float32):
-    return torch.tensor([[1, y, z, 0],
-                         [0, 1, 0, 0],
-                         [0, 0, 1, 0],
+def shear(params, shape, dtype=torch.float32):
+    affine = torch.tensor([[1, params[0], params[1], 0],
+                         [params[2], 1, params[3], 0],
+                         [params[4], params[5], 1, 0],
                          [0, 0, 0, 1]], dtype=dtype)
-
-
-def shear_y(x, z, dtype=torch.float32):
-    return torch.tensor([[1, 0, 0, 0],
-                         [x, 1, z, 0],
-                         [0, 0, 1, 0],
-                         [0, 0, 0, 1]], dtype=dtype)
-
-
-def shear_z(x, y, dtype=torch.float32):
-    return torch.tensor([[1, 0, 0, 0],
-                         [0, 1, 0, 0],
-                         [x, y, 1, 0],
-                         [0, 0, 0, 1]], dtype=dtype)
+    # adjust the origin
+    affine[:3, 3] = affine[:3, 3] - (1/2) * ((torch.tensor(shape, dtype=torch.float32) - 1) *
+                                             (affine @ torch.tensor([1, 1, 1, 0], dtype=torch.float32) - 1)[:3])
+    return affine
 
 
 def flip(flip_params, shape):
@@ -119,6 +109,8 @@ def flip(flip_params, shape):
     translate_params = [0, 0, 0]
     scale_params = [1, 1, 1]
     if flip_params[0]:
+        # Note: I translate by the shape instead of shape - 1
+        # because the issues with the voxel coordinates are taken care of in the scaling function
         translate_params[0] = shape[0]
         scale_params[0] = -1
     if flip_params[1]:
