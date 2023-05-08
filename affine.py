@@ -1,38 +1,6 @@
 import torch
 
 
-def augment(affine, translate_params=None, scale_params=None, rotate_params=None, shear_params=None, flip_params=None,
-            shape=None):
-    transforms = create_augmentation_transforms(translate_params, scale_params, rotate_params, shear_params,
-                                                flip_params, shape)
-    augmentation_transform = torch.eye(4, dtype=affine.dtype)
-    for transform in transforms:
-        augmentation_transform = torch.matmul(transform, augmentation_transform)
-    return torch.matmul(affine, augmentation_transform)
-
-
-def create_augmentation_transforms(translate_params=None, scale_params=None, rotate_params=None, shear_params=None,
-                                   flip_params=None, shape=None):
-    transforms = list()
-    if translate_params is not None:
-        transforms.append(translate(*translate_params))
-    if scale_params is not None:
-        transforms.append(scale(*scale_params))
-    if rotate_params is not None:
-        if shape is None:
-            raise ValueError("shape must be provided if rotate_params are provided")
-        transforms.append(rotate(rotate_params, torch.tensor(shape)))
-    if shear_params is not None:
-        if shape is None:
-            raise ValueError("shape must be provided if shear_params are provided")
-        transforms.append(shear(shear_params, shape))
-    if flip_params is not None:
-        if shape is None:
-            raise ValueError("shape must be provided if flip_params are provided")
-        transforms.append(flip(flip_params, shape))
-    return transforms
-
-
 def translate(x, y, z, dtype=torch.float32):
     return torch.tensor([[1, 0, 0, x],
                          [0, 1, 0, y],
