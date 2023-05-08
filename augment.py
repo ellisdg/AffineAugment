@@ -1,6 +1,6 @@
 import torch
-from monai.transforms import SpatialResample, Affine, Zoom, Rotate, Flip
-
+from monai.transforms import SpatialResample, Affine, Zoom, Rotate, Flip, ResampleToMatch
+from monai.data import MetaTensor
 from affine import translate, scale, rotate, shear, flip
 
 
@@ -10,9 +10,11 @@ def resample(image, target_affine, target_shape, mode='bilinear', dtype=None, al
     else:
         dtype = image.dtype
 
-    resampler = SpatialResample(mode=mode, align_corners=align_corners, dtype=dtype)
-
-    return resampler(img=image[None], dst_affine=target_affine, spatial_size=target_shape)[0]
+    resampler = ResampleToMatch(mode=mode, align_corners=align_corners, dtype=dtype)
+    image.meta['filename_or_obj'] = "placeholder.nii.gz"
+    return resampler(img=image, img_dst=MetaTensor(x=torch.zeros(target_shape, dtype=dtype),
+                                                   affine=target_affine,
+                                                   meta={'filename_or_obj': "placeholder.nii.gz"}))
 
 
 def augment_image(image, translate_params=None, rotate_params=None, shear_params=None,flip_params=None,
