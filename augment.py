@@ -4,18 +4,18 @@ from monai.transforms import SpatialResample, Affine, Zoom, Rotate, Flip
 from affine import translate, scale, rotate, shear, flip
 
 
-def resample(image, target_affine, target_shape, mode='bilinear', dtype=None, align_corners=True):
+def resample(image, target_affine, target_shape, mode='bilinear', dtype=None, align_corners=False):
     if dtype:
         image = image.to(dtype)
     else:
         dtype = image.dtype
 
     resampler = SpatialResample(mode=mode, align_corners=align_corners, dtype=dtype)
+    
+    return resampler(img=image[None], dst_affine=target_affine, spatial_size=target_shape)[0]
 
-    return resampler(img=image, dst_affine=target_affine, spatial_size=target_shape)
 
-
-def augment_image(image, translate_params=None, rotate_params=None, shear_params=None,flip_params=None,
+def  augment_image(image, translate_params=None, rotate_params=None, shear_params=None,flip_params=None,
                   scale_params=None, shape=None):
     affine = augment_affine(image.affine, translate_params=translate_params, rotate_params=rotate_params,
                             shear_params=shear_params, flip_params=flip_params, scale_params=scale_params, shape=shape)
@@ -24,7 +24,7 @@ def augment_image(image, translate_params=None, rotate_params=None, shear_params
 
 
 def monai_augment_image(image, translate_params=None, rotate_params=None, shear_params=None, flip_params=None,
-                        scale_params=None,):
+                        scale_params=None, keep_size=True):
     if translate_params is not None:
         image, _ = Affine(translate_params=translate_params.tolist())(image.detach().clone())
     if rotate_params is not None:
@@ -36,7 +36,7 @@ def monai_augment_image(image, translate_params=None, rotate_params=None, shear_
             if flip_params[index]:
                 image = Flip(index)(image)
     if scale_params is not None:
-        image = Zoom((1/scale_params).tolist(), keep_size=False)(image)
+        image = Zoom((1/scale_params).tolist(), keep_size=keep_size)(image)
     return image
 
 

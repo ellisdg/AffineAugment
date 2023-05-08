@@ -8,10 +8,13 @@ import nibabel as nib
 import torch
 from augment import augment_image, monai_augment_image
 import argparse
+import numpy as np
+import time
 
 
 class T2wToT1wDataset(Dataset):
-    def __init__(self, t2w_files, augment=None, normalize=True, augmentation_probability=0.5):
+    def __init__(self, t2w_files, augment=None, normalize=True, augmentation_probability=0.5, dtype=torch.float32):
+        self.image_dtype = dtype
         self.augment = augment
         self.normalize = normalize
         self.augmentation_probability = augmentation_probability
@@ -30,10 +33,12 @@ class T2wToT1wDataset(Dataset):
     def __getitem__(self, idx):
         t2w_file = self.t2w_files[idx]
         t2w_image = nib.load(t2w_file)
-        t2w_data = MetaTensor(torch.from_numpy(t2w_image.get_fdata()), affine=torch.from_numpy(t2w_image.affine))
+        t2w_data = MetaTensor(torch.from_numpy(t2w_image.get_fdata()[None]).to(dtype=self.image_dtype),
+                              affine=torch.from_numpy(t2w_image.affine).to(dtype=self.image_dtype))
         t1w_file = self.t1w_files[idx]
         t1w_image = nib.load(t1w_file)
-        t1w_data = MetaTensor(torch.from_numpy(t1w_image.get_fdata()), affine=torch.from_numpy(t1w_image.affine))
+        t1w_data = MetaTensor(torch.from_numpy(t1w_image.get_fdata()[None]).to(dtype=self.image_dtype),
+                              affine=torch.from_numpy(t1w_image.affine).to(dtype=self.image_dtype))
         if self.normalize:
             t2w_data = (t2w_data - t2w_data.mean()) / torch.std(t2w_data)
             t1w_data = (t1w_data - t1w_data.mean()) / torch.std(t1w_data)
@@ -60,8 +65,8 @@ class T2wToT1wDataset(Dataset):
         else:
             flip_params = None
         if torch.rand(1) < self.augmentation_probability:
-            # generate shear params with mean 0 and std 0.5
-            shear_params = torch.randn(3) * 0.5
+            # generate shear params with mean 0 and std 0.1
+            shear_params = torch.randn(6) * 0.1
         else:
             shear_params = None
         if torch.rand(1) < self.augmentation_probability:
@@ -81,10 +86,14 @@ class T2wToT1wDataset(Dataset):
 
     def my_augment(self, t2w_data, t1w_data):
         translate_params, rotate_params, flip_params, shear_params, scale_params = self.generate_augmentation_parameters()
+
         t2w_data = augment_image(image=t2w_data, translate_params=translate_params, rotate_params=rotate_params,
-                                 flip_params=flip_params, shear_params=shear_params, scale_params=scale_params)
+                                 flip_params=flip_params, shear_params=shear_params, scale_params=scale_params,
+                                 shape=t2w_data.shape[1:])
         t1w_data = augment_image(image=t1w_data, translate_params=translate_params, rotate_params=rotate_params,
-                                 flip_params=flip_params, shear_params=shear_params, scale_params=scale_params)
+                                 flip_params=flip_params, shear_params=shear_params, scale_params=scale_params,
+                                 shape=t1w_data.shape[1:])
+
         return t2w_data, t1w_data
 
 
@@ -139,7 +148,7 @@ def main():
     args = parse_args()
     # Set the seed for reproducibility
     set_determinism(seed=25)
-    filenames = glob.glob("/work/aizenberg/dgellis/HCP/HCP_1200/*/T2w/T2w_acpc_dc_restore_brain.nii.gz")
+    filenames = glob.glob("/work/aizenberg/dgellis/HCP/HCP_1200/*/T1w/T2w_acpc_dc_restore_brain_cropped.nii.gz")
     # split filenames into train and validation
     train_filenames, val_filenames = train_validation_split(filenames, validation_size=0.2, random_state=25)
     train_dataset = T2wToT1wDataset(train_filenames, augment=args.augment,
@@ -150,8 +159,11 @@ def main():
     model = torch.nn.DataParallel(get_model()).cuda()
     optimizer = torch.optim.Adam(model.parameters(), lr=1e-3)
     loss_function = torch.nn.MSELoss().cuda()
+    training_log = []
     for epoch in range(args.epochs):
+        start = time.time()
         print("Epoch: {}".format(epoch))
+        training_losses = list()
         for i, (t2w_data, t1w_data) in enumerate(train_loader):
             t2w_data = t2w_data.cuda()
             t1w_data = t1w_data.cuda()
@@ -160,14 +172,24 @@ def main():
             loss = loss_function(output, t1w_data)
             loss.backward()
             optimizer.step()
-            print("Step {}/{}; Loss: {}".format(i, int(len(train_loader)/2), loss.item()))
+            training_losses.append(loss.item())
+            print("Step {}/{}; Loss: {}".format(i+1, len(train_loader), loss.item()))
+        validation_losses = list()
         for i, (t2w_data, t1w_data) in enumerate(val_loader):
             t2w_data = t2w_data.cuda()
             t1w_data = t1w_data.cuda()
             output = model(t2w_data)
             loss = loss_function(output, t1w_data)
-            print("Validation Step {}/{}; Loss: {}".format(i, int(len(val_loader)/2), loss.item()))
-        torch.save(model.state_dict(), args.model_filename)
+            validation_losses.append(loss.item())
+            print("Validation Step {}/{}; Loss: {}".format(i+1, len(val_loader), loss.item()))
+        stop = time.time()
+        training_log.append([epoch, np.mean(training_losses), np.mean(validation_losses), stop-start])
+        with open(args.model_filename.replace(".pt", ".txt"), "w") as f:
+            f.write("Epoch\tTraining Loss\tValidation Loss\tTime\n")
+            for epoch, training_loss, validation_loss, epoch_time in training_log:
+                f.write("{}\t{}\t{}\t{}\n".format(epoch, training_loss, validation_loss, epoch_time))
+        if epoch % 10 == 0:
+            torch.save(model.state_dict(), args.model_filename.replace(".pt", "_epoch_{}.pt".format(epoch)))
 
 
 if __name__ == "__main__":
