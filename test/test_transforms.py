@@ -47,10 +47,10 @@ class TestTransforms(unittest.TestCase):
     def test_zoom(self):
         zoom_params = torch.tensor([0.5, 1.5, 1.5])
 
-        monai_zoom = Zoom(zoom=zoom_params, keep_size=False)(self.image)
+        monai_zoom = Zoom(zoom=zoom_params, keep_size=True)(self.image)
 
         # The scaling parameters are the inverse of the zoom parameters
-        affine_zoom = augment_affine(self.image.affine, scale_params=1 / zoom_params)
+        affine_zoom = augment_affine(self.image.affine, scale_params=1 / zoom_params, shape=self.image.shape[1:])
 
         self.assertTrue(torch.allclose(monai_zoom.affine, affine_zoom, atol=1e-5))
 

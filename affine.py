@@ -8,32 +8,43 @@ def translate(x, y, z, dtype=torch.float32):
                          [0, 0, 0, 1]], dtype=dtype)
 
 
-def scale(x, y, z, dtype=torch.float32):
-    # scaling the image changes the size of the voxels, so we need to adjust the origin to keep the edges of the image
-    # consistent with the original image
-    return torch.tensor([[x, 0, 0, (x - 1)/2],
-                         [0, y, 0, (y - 1)/2],
-                         [0, 0, z, (z - 1)/2],
-                         [0, 0, 0, 1]], dtype=dtype)
+def get_back_to_origin_transform(shape, dtype=torch.float32):
+    # translate the origin back to the corner of the image
+    return translate(*-1*((shape-1)/2), dtype=dtype)
 
 
-def rotate(theta, shape, dtype=torch.float32):
-    # we want to rotate around the center of the image, so we need to translate the origin to the center of the image
-
+def get_center_transform(shape, dtype=torch.float32):
     # translate the origin to the center of the image
-    center = translate(*-1*((shape-1)/2), dtype=dtype)
     # This was a bit confusing to me at first, but we need to subtract 1 from the shape because the origin of the
     # image is the center of the corner voxel, not the corner of the corner voxel.  So, if the image is 100x100x100,
     # the distance between the origin and the center of the opposite corner is 99 voxels, not 100. Therefore,
     # the center of the image is at (99/2, 99/2, 99/2), not (100/2, 100/2, 100/2).
+    return translate(*((shape-1)/2), dtype=dtype)
 
+
+def scale(x, y, z, shape, dtype=torch.float32, keep_size=True):
+    if keep_size:
+        scale = torch.tensor([[x, 0, 0, 0],
+                              [0, y, 0, 0],
+                              [0, 0, z, 0],
+                              [0, 0, 0, 1]], dtype=dtype)
+        return get_center_transform(shape, dtype=dtype) @ scale @ get_back_to_origin_transform(shape, dtype=dtype)
+    else:
+        # scaling the image changes the size of the voxels, so we need to adjust the origin to keep the edges of the
+        # image consistent with the original image
+        scale = torch.tensor([[x, 0, 0, (x - 1) / 2],
+                              [0, y, 0, (y - 1) / 2],
+                              [0, 0, z, (z - 1) / 2],
+                              [0, 0, 0, 1]], dtype=dtype)
+        return scale
+
+
+def rotate(theta, shape, dtype=torch.float32):
+    # we want to rotate around the center of the image, so we need to translate the origin to the center of the image
+    # and then translate it back after the rotation
     # rotate
     rotate = rotate_x(theta[0], dtype=dtype) @ rotate_y(theta[1], dtype=dtype) @ rotate_z(theta[2], dtype=dtype)
-
-    # translate the origin back to the corner of the image
-    goback = translate(*((shape-1)/2), dtype=dtype)
-
-    return goback @ rotate @ center
+    return get_center_transform(shape, dtype=dtype) @ rotate @ get_back_to_origin_transform(shape, dtype=dtype)
 
 
 def rotate_x(theta, dtype=torch.float32):
@@ -58,20 +69,13 @@ def rotate_z(theta, dtype=torch.float32):
 
 
 def shear(params, shape, dtype=torch.float32):
-    shape = torch.tensor(shape, dtype=torch.float32)
-    # translate the origin to the center of the image
-    center = translate(*-1 * ((shape - 1) / 2), dtype=dtype)
-
     # shear
     affine = torch.tensor([[1, params[0], params[1], 0],
                          [params[2], 1, params[3], 0],
                          [params[4], params[5], 1, 0],
                          [0, 0, 0, 1]], dtype=dtype)
 
-    # translate the origin back to the corner of the image
-    goback = translate(*((shape - 1) / 2), dtype=dtype)
-
-    return goback @ affine @ center
+    return get_center_transform(shape, dtype=dtype) @ affine @ get_back_to_origin_transform(shape, dtype=dtype)
 
 
 def flip(flip_params, shape):
@@ -93,6 +97,6 @@ def flip(flip_params, shape):
     if flip_params[2]:
         translate_params[2] = shape[2]
         scale_params[2] = -1
-    return translate(*translate_params) @ scale(*scale_params)
+    return translate(*translate_params) @ scale(*scale_params, shape=shape, keep_size=False)
 
 

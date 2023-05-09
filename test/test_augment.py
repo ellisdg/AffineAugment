@@ -27,7 +27,6 @@ class TestAugment(unittest.TestCase):
                                           rotate_params=rotate_params,
                                           flip_params=flip_params,
                                           shear_params=shear_params,
-                                          scale_params=scale_params,
-                                          keep_size=False)
+                                          scale_params=scale_params)
         print(my_image.shape)
         self.assertTrue(torch.allclose(my_image.affine, monai_image.affine, atol=1e-5))
