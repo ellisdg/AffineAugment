@@ -22,8 +22,21 @@ def get_center_transform(shape, dtype=torch.float32):
     return translate(*((shape-1)/2), dtype=dtype)
 
 
-def scale(x, y, z, shape, dtype=torch.float32, keep_size=True):
-    if keep_size:
+def scale(x, y, z, shape, dtype=torch.float32, center=True):
+    """
+    Generate a transformation matrix to scale an image
+    :param x: scaling in the x-direction
+    :param y: scaling in the y-direction
+    :param z: scaling in the z-direction
+    :param shape: the shape of the image
+    :param dtype: the data type for the resulting affine matrix
+    :param center: Perform the scaling around the center of the image. If True, this is equivalent to the inverse
+    of MONAI's Zoom implementation.
+    :return: affine matrix to scale the image
+    """
+    if center:
+        # This duplicates the behavior of MONAI's Zoom implementation.
+        # The image is scaled based on the center of the image.
         scale = torch.tensor([[x, 0, 0, 0],
                               [0, y, 0, 0],
                               [0, 0, z, 0],
@@ -43,8 +56,8 @@ def rotate(theta, shape, dtype=torch.float32):
     # we want to rotate around the center of the image, so we need to translate the origin to the center of the image
     # and then translate it back after the rotation
     # rotate
-    rotate = rotate_x(theta[0], dtype=dtype) @ rotate_y(theta[1], dtype=dtype) @ rotate_z(theta[2], dtype=dtype)
-    return get_center_transform(shape, dtype=dtype) @ rotate @ get_back_to_origin_transform(shape, dtype=dtype)
+    rotate_matrix = rotate_x(theta[0], dtype=dtype) @ rotate_y(theta[1], dtype=dtype) @ rotate_z(theta[2], dtype=dtype)
+    return get_center_transform(shape, dtype=dtype) @ rotate_matrix @ get_back_to_origin_transform(shape, dtype=dtype)
 
 
 def rotate_x(theta, dtype=torch.float32):
@@ -69,6 +82,13 @@ def rotate_z(theta, dtype=torch.float32):
 
 
 def shear(params, shape, dtype=torch.float32):
+    """
+    Generate a shear transformation matrix based on the parameters
+    :param params: A list of length 6 containing the shear parameters
+    :param shape: the shape of the image
+    :param dtype: The data type for the generated transformation matrix
+    :return: the shear transformation matrix
+    """
     # shear
     affine = torch.tensor([[1, params[0], params[1], 0],
                          [params[2], 1, params[3], 0],
@@ -97,6 +117,6 @@ def flip(flip_params, shape):
     if flip_params[2]:
         translate_params[2] = shape[2]
         scale_params[2] = -1
-    return translate(*translate_params) @ scale(*scale_params, shape=shape, keep_size=False)
+    return translate(*translate_params) @ scale(*scale_params, shape=shape, center=False)
 
 
