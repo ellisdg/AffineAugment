@@ -5,8 +5,6 @@ import pandas as pd
 from plot_training_results import read_tab_seperated_file
 
 
-
-
 def main():
     seaborn.set_palette("muted")
     seaborn.set_style("whitegrid")
@@ -24,6 +22,7 @@ def main():
     plt.clf()
     seaborn.boxplot(long_results, x="n transforms", y="MSE", hue="Model")
     plt.savefig("results/boxplot_mse.png")
+
 
 if __name__ == "__main__":
     main()
