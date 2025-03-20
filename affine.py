@@ -2,6 +2,14 @@ import torch
 
 
 def translate(x, y, z, dtype=torch.float32):
+    """
+    Generate a transformation matrix to translate an image
+    :param x: translation in the x-direction
+    :param y: translation in the y-direction
+    :param z: tran slation in the z-direction
+    :param dtype: data type for the resulting affine matrix
+    :return: translation matrix as a torch tensor
+    """
     return torch.tensor([[1, 0, 0, x],
                          [0, 1, 0, y],
                          [0, 0, 1, z],
@@ -9,16 +17,26 @@ def translate(x, y, z, dtype=torch.float32):
 
 
 def get_back_to_origin_transform(shape, dtype=torch.float32):
-    # translate the origin back to the corner of the image
+    """
+    translate the origin back to the corner of the image
+    :param shape: Shape of the image
+    :param dtype: data type for the resulting affine matrix
+    :return: translation affine matrix
+    """
     return translate(*-1*((shape-1)/2), dtype=dtype)
 
 
 def get_center_transform(shape, dtype=torch.float32):
-    # translate the origin to the center of the image
-    # This was a bit confusing to me at first, but we need to subtract 1 from the shape because the origin of the
-    # image is the center of the corner voxel, not the corner of the corner voxel.  So, if the image is 100x100x100,
-    # the distance between the origin and the center of the opposite corner is 99 voxels, not 100. Therefore,
-    # the center of the image is at (99/2, 99/2, 99/2), not (100/2, 100/2, 100/2).
+    """
+    translate the origin to the center of the image
+    This was a bit confusing to me at first, but we need to subtract 1 from the shape because the origin of the
+    image is the center of the corner voxel, not the corner of the corner voxel.  So, if the image is 100x100x100,
+    the distance between the origin and the center of the opposite corner is 99 voxels, not 100. Therefore,
+    the center of the image is at (99/2, 99/2, 99/2), not (100/2, 100/2, 100/2).
+    :param shape: shape of the image
+    :param dtype: data type for the resulting affine matrix
+    :return: translation affine matrix
+    """
     return translate(*((shape-1)/2), dtype=dtype)
 
 
@@ -53,8 +71,15 @@ def scale(x, y, z, shape, dtype=torch.float32, center=True):
 
 
 def rotate(theta, shape, dtype=torch.float32):
-    # we want to rotate around the center of the image, so we need to translate the origin to the center of the image
-    # and then translate it back after the rotation
+    """
+    Generate a rotation transformation matrix based on the parameters
+    we want to rotate around the center of the image, so we need to translate the origin to the center of the image
+    and then translate it back after the rotation
+    :param theta: rotation parameters in the form [x, y, z]
+    :param shape: shape of the image
+    :param dtype: data type for the resulting affine matrix
+    :return: affine rotation matrix in torch tensor form
+    """
     # rotate
     rotate_matrix = rotate_x(theta[0], dtype=dtype) @ rotate_y(theta[1], dtype=dtype) @ rotate_z(theta[2], dtype=dtype)
     return get_center_transform(shape, dtype=dtype) @ rotate_matrix @ get_back_to_origin_transform(shape, dtype=dtype)

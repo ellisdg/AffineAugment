@@ -5,6 +5,16 @@ from affine import translate, scale, rotate, shear, flip
 
 
 def resample(image, target_affine, target_shape, mode='bilinear', dtype=None, align_corners=False):
+    """
+    Resample an image to a target affine and shape. The target affine and shape represent the sampling grid.
+    :param image: Image to be resampled
+    :param target_affine: affine describing the sampling grid
+    :param target_shape: shape of the sampling grid
+    :param mode: interpolatoin mode
+    :param dtype: data type for the resulting image
+    :param align_corners: MONAI flag for resampling. Should be set to False.
+    :return: Resampled image
+    """
     if dtype:
         image = image.to(dtype)
     else:
@@ -19,6 +29,18 @@ def resample(image, target_affine, target_shape, mode='bilinear', dtype=None, al
 
 def augment_image(image, translate_params=None, rotate_params=None, shear_params=None,flip_params=None,
                   scale_params=None, shape=None, verbose=False):
+    """
+    Take in the defined parameters and augment the image.
+    :param image: Image to be augmented
+    :param translate_params: tensor containing 3 translation parameters (x, y, z) in voxels
+    :param rotate_params: tensor containing 3 rotation parameters (x, y, z) in radians
+    :param shear_params: tensor contain 6 shear parameters (xy, xz, yx, yz, zx, zy)
+    :param flip_params: tensor containing 3 flip parameters (x, y, z), where False means no flip and True means flip
+    :param scale_params: tensor containing 3 scale parameters (x, y, z) in voxel scale
+    :param shape: shape of the sampling grid
+    :param verbose: Print the affine matrix after augmentation
+    :return: Resampled image augmented according to the parameters
+    """
     affine = augment_affine(image.affine, translate_params=translate_params, rotate_params=rotate_params,
                             shear_params=shear_params, flip_params=flip_params, scale_params=scale_params,
                             shape=torch.tensor(shape), verbose=verbose)
@@ -28,6 +50,17 @@ def augment_image(image, translate_params=None, rotate_params=None, shear_params
 
 def monai_augment_image(image, translate_params=None, rotate_params=None, shear_params=None, flip_params=None,
                         scale_params=None, keep_size=True):
+    """
+    Code to augment an image using MONAI transforms. This is used to compare the results of the augment_image function.
+    :param image: image to be augmented
+    :param translate_params: translation parameters in voxels (x, y, z)
+    :param rotate_params: rotation parameters in radians (x, y, z)
+    :param shear_params: shear parameters (xy, xz, yx, yz, zx, zy)
+    :param flip_params: flip parameters (x, y, z), where False means no flip and True means flip
+    :param scale_params: scale parameters (x, y, z) in voxel scale
+    :param keep_size: flag for MONAI zoom to perform scaling around the center of the image. Should be set to True.
+    :return: augmented image
+    """
     if translate_params is not None:
         image, _ = Affine(translate_params=translate_params.tolist())(image.detach().clone())
     if rotate_params is not None:
@@ -45,6 +78,21 @@ def monai_augment_image(image, translate_params=None, rotate_params=None, shear_
 
 def augment_affine(affine, translate_params=None, rotate_params=None, shear_params=None, flip_params=None,
                    scale_params=None, shape=None, verbose=False):
+    """
+    Augment an affine matrix using the defined parameters.
+    :param affine: The input affine matrix describing the transformation from voxel to world coordinates
+    :param translate_params: translation parameters in voxels (x, y, z)
+    :param rotate_params: rotation parameters in radians (x, y, z)
+    :param shear_params: shear parameters (xy, xz, yx, yz, zx, zy)
+    :param flip_params: flip parameters (x, y, z), where False means no flip and True means flip
+    :param scale_params: scale parameters (x, y, z) in voxel scale
+    :param shape: shape of the sampling grid
+    :param verbose: Print the affine matrix after augmentation
+    :return: affine matrix of augmented sampling grid.
+    """
+    # if the shape is not a torch tensor, convert it to one
+    if shape is not None and type(shape) != torch.tensor:
+        shape = torch.tensor(shape)
     transforms = create_augmentation_transforms(translate_params=translate_params,
                                                 rotate_params=rotate_params,
                                                 shear_params=shear_params,
@@ -61,6 +109,16 @@ def augment_affine(affine, translate_params=None, rotate_params=None, shear_para
 
 def create_augmentation_transforms(translate_params=None, rotate_params=None, shear_params=None,
                                    flip_params=None, scale_params=None, shape=None):
+    """
+    Create a list of transforms to be applied to an affine matrix.
+    :param translate_params: translation parameters in voxels (x, y, z)
+    :param rotate_params: rotation parameters in radians (x, y, z)
+    :param shear_params: shear parameters (xy, xz, yx, yz, zx, zy)
+    :param flip_params: flip parameters (x, y, z), where False means no flip and True means flip
+    :param scale_params: scale parameters (x, y, z) in voxel scale
+    :param shape: shape of the input image
+    :return: a list of transforms to be applied to an affine matrix
+    """
     if type(shape) == tuple:
         shape = torch.tensor(shape)
     transforms = list()

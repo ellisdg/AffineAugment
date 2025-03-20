@@ -5,8 +5,9 @@ David Ellis
 AffineAugment is a Python library for augmenting 3D medical images using affine transformations.
 
 ## Files
-* `affine.py` contains the functions to generate the affine transformations.
-* `augment.py` contains the functions to apply the affine augmentations to the images.
+* 'EllisFinalProject.pdf' contains the report for this project.
+* `affine.py` contains the functions to generate the affine transformations. Most of the linear algebra part of this project is contained in this file.
+* `augment.py` contains the functions to apply the affine augmentations to the images. The rest of the linear algebra part of this project is contained in this file.
 * `test/test_augment.py` contains the unit test that compares a combined augmentation using my code and MONAI's code.
 * `test/test_transforms.py` contains unit tests for testing the affine transformations against MONAI's tranformations.
 * `preprocess.py` contains the code to crop the input images into images that will fit into the network.
@@ -24,5 +25,28 @@ pip install -r requirements.txt
 export PYTHONPATH=$PYTHONPATH:/path/to/AffineAugment
 ```
 
+## Usuage
+To run the unit tests showing that my affine transformations are equivalent to MONAI's affine transformations:
+```
+python -m unittest discover test
+```
 
+To get information about the model training script:
+```
+python train_model.py --help
+```
+```
+usage: train_model.py [-h] [--augment AUGMENT] [--augmentation_probability AUGMENTATION_PROBABILITY] [--epochs EPOCHS] [--batch_size BATCH_SIZE] [--model_filename MODEL_FILENAME]
+
+options:
+  -h, --help            show this help message and exit
+  --augment AUGMENT     augmentation method: (None, monai, mine)
+  --augmentation_probability AUGMENTATION_PROBABILITY
+                        probability of augmentation
+  --epochs EPOCHS       number of epochs
+  --batch_size BATCH_SIZE
+                        batch size
+  --model_filename MODEL_FILENAME
+                        filename to save model
+```
 
