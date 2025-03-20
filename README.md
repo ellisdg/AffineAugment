@@ -6,6 +6,18 @@ MONAI has similar functionality, but I wanted to implement my own affine transfo
 I also wanted to compare the results of using my affine transformations to the results of using MONAI's affine transformations.
 I am uploading this project as I believe it is a good reference for anyone who wants to understand how to implement affine transformations in Python.
 
+#### Error Reduction in Combined Augmentations
+![Error Reduction](./results/boxplot_mse.png)
+Performing all affine transformations in one step reduced the error of the augmented images when compared to the original images.
+
+#### Time Savings in Combined Augmentations
+![Time Savings](./results/boxplot_time.png)
+Performing all affine transformations in one step can save time when compared to performing each affine transformation in a separate step.
+
+#### Training Results
+![Training Results](./results/training_results_monai_transparent.png)
+Training the model with the combined augmentations resulted in better performance on the validation set and less overfitting to the training set.
+
 ## Main Files
 * `affine.py` contains the functions to generate the affine transformations. Most of the linear algebra part of this project is contained in this file.
 * `augment.py` contains the functions to apply the affine augmentations to the images. The rest of the linear algebra part of this project is contained in this file.

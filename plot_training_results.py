@@ -43,10 +43,10 @@ def main():
 
     # plot both mine and monai training and validation losses with mine transparent
     plt.clf()
-    plt.plot(my_results[1][:, 0], my_results[1][:, 1], label="Training (Mine)", color="C0", alpha=0.5)
-    plt.plot(my_results[1][:, 0], my_results[1][:, 2], label="Validation (Mine)", color="C1", alpha=0.5)
-    plt.plot(monai_results[1][:, 0], monai_results[1][:, 1], label="Training (MONAI)", color="C2")
-    plt.plot(monai_results[1][:, 0], monai_results[1][:, 2], label="Validation (MONAI)", color="C3")
+    plt.plot(my_results[1][:, 0], my_results[1][:, 1], label="Training (Combined)", color="C0", alpha=0.5)
+    plt.plot(my_results[1][:, 0], my_results[1][:, 2], label="Validation (Combined)", color="C1", alpha=0.5)
+    plt.plot(monai_results[1][:, 0], monai_results[1][:, 1], label="Training (Stepwise)", color="C2")
+    plt.plot(monai_results[1][:, 0], monai_results[1][:, 2], label="Validation (Stepwise)", color="C3")
     plt.yscale("log")
     plt.xlabel("Epoch")
     plt.ylabel("MSE")
@@ -55,10 +55,10 @@ def main():
 
     # plot both mine and monai training and validation losses with monai transparent
     plt.clf()
-    plt.plot(my_results[1][:, 0], my_results[1][:, 1], label="Training (Mine)", color="C0")
-    plt.plot(my_results[1][:, 0], my_results[1][:, 2], label="Validation (Mine)", color="C1")
-    plt.plot(monai_results[1][:, 0], monai_results[1][:, 1], label="Training (MONAI)", color="C2", alpha=0.5)
-    plt.plot(monai_results[1][:, 0], monai_results[1][:, 2], label="Validation (MONAI)", color="C3", alpha=0.5)
+    plt.plot(my_results[1][:, 0], my_results[1][:, 1], label="Training (Combined)", color="C0")
+    plt.plot(my_results[1][:, 0], my_results[1][:, 2], label="Validation (Combined)", color="C1")
+    plt.plot(monai_results[1][:, 0], monai_results[1][:, 1], label="Training (Stepwise)", color="C2", alpha=0.5)
+    plt.plot(monai_results[1][:, 0], monai_results[1][:, 2], label="Validation (Stepwise)", color="C3", alpha=0.5)
     plt.yscale("log")
     plt.xlabel("Epoch")
     plt.ylabel("MSE")
@@ -67,10 +67,10 @@ def main():
 
     # plot both mine and monai training and validation losses with none transparent
     plt.clf()
-    plt.plot(my_results[1][:, 0], my_results[1][:, 1], label="Training (Mine)", color="C0")
-    plt.plot(my_results[1][:, 0], my_results[1][:, 2], label="Validation (Mine)", color="C1")
-    plt.plot(monai_results[1][:, 0], monai_results[1][:, 1], label="Training (MONAI)", color="C2")
-    plt.plot(monai_results[1][:, 0], monai_results[1][:, 2], label="Validation (MONAI)", color="C3")
+    plt.plot(my_results[1][:, 0], my_results[1][:, 1], label="Training (Combined)", color="C0")
+    plt.plot(my_results[1][:, 0], my_results[1][:, 2], label="Validation (Combined)", color="C1")
+    plt.plot(monai_results[1][:, 0], monai_results[1][:, 1], label="Training (Stepwise)", color="C2")
+    plt.plot(monai_results[1][:, 0], monai_results[1][:, 2], label="Validation (Stepwise)", color="C3")
     plt.yscale("log")
     plt.xlabel("Epoch")
     plt.ylabel("MSE")
@@ -79,7 +79,7 @@ def main():
 
     # Compare epoch times
     plt.clf()
-    plt.boxplot([my_results[1][:, 3], monai_results[1][:, 3]], labels=["Mine", "MONAI"])
+    plt.boxplot([my_results[1][:, 3], monai_results[1][:, 3]], labels=["Combined", "Stepwise"])
     plt.ylabel("Epoch Time (s)")
     plt.savefig("results/epoch_times.png")
 
