@@ -1,0 +1,251 @@
+n_params,,my_signal_loss,monai_signal_loss,my_time,monai_time,,,,
+1,['flip_params'],0,0,0.012949944,0.003004313,,,,
+1,['translate_params'],469.27362,469.27557,0.474039078,0.93529582,,,,
+1,['rotate_params'],344.5216,344.5216,0.587439299,0.585141182,,,,
+1,['flip_params'],5.59E-07,2.03E-07,0.468791008,0.010957003,,,,
+1,['rotate_params'],341.75797,341.75797,0.591100216,0.584910154,,,,
+1,['rotate_params'],345.18222,345.18216,0.467020035,0.468340158,,,,
+1,['rotate_params'],349.19083,349.1908,0.528231144,0.530984879,,,,
+1,['scale_params'],356.63214,724.9717,0.463645935,0.368863821,,,,
+1,['translate_params'],352.28967,352.29184,0.461214066,0.945897818,,,,
+1,['flip_params'],3.49E-07,4.30E-08,0.464087725,0.006575108,,,,
+1,['flip_params'],5.59E-07,2.03E-07,0.462684155,0.010926962,,,,
+1,['rotate_params'],343.74683,343.7468,0.592995882,0.577566862,,,,
+1,['translate_params'],589.3269,589.3277,0.463635921,0.923295975,,,,
+1,['shear_params'],366.42984,366.42987,0.469818115,0.929858923,,,,
+1,['scale_params'],347.59927,709.3605,0.468067169,0.360363007,,,,
+1,['rotate_params'],347.45325,347.45334,0.511135101,0.504906178,,,,
+1,['shear_params'],364.71548,364.71545,0.470211029,0.918474913,,,,
+1,['flip_params'],4.32E-07,1.33E-07,0.46568799,0.007631063,,,,
+1,['shear_params'],364.35373,364.35367,0.49071002,0.945726871,,,,
+1,['shear_params'],361.35638,361.35632,0.474393845,0.945789099,,,,
+1,['shear_params'],360.9599,360.95984,0.516507149,0.971959114,,,,
+1,['scale_params'],359.6342,683.9139,0.459176302,0.339100838,,,,
+1,['flip_params'],4.32E-07,1.33E-07,0.461117268,0.006947756,,,,
+1,['translate_params'],264.7154,264.714,0.461555958,0.90990591,,,,
+1,['scale_params'],363.56073,708.0974,0.456803799,0.34335804,,,,
+1,['rotate_params'],346.31818,346.31818,0.582397223,0.566920996,,,,
+1,['rotate_params'],343.77042,343.77036,0.532907963,0.524936199,,,,
+1,['translate_params'],528.14886,528.14465,0.454984903,0.901564837,,,,
+1,['rotate_params'],345.56183,345.56183,0.515767097,0.51901412,,,,
+1,['rotate_params'],342.0557,342.0557,0.56845212,0.565891981,,,,
+1,['flip_params'],0,0,0.006939888,0.002662897,,,,
+1,['rotate_params'],347.95325,347.9532,0.554585695,0.555279016,,,,
+1,['shear_params'],362.63693,362.63702,0.465728045,0.952638865,,,,
+1,['scale_params'],287.29745,703.715,0.457083225,0.335762262,,,,
+1,['rotate_params'],346.37378,346.37375,0.63949585,0.63083005,,,,
+1,['rotate_params'],345.4979,345.49783,0.472247124,0.474983931,,,,
+1,['shear_params'],361.05548,361.05548,0.511333227,0.94288516,,,,
+1,['rotate_params'],342.22778,342.22772,0.472023964,0.464197874,,,,
+1,['translate_params'],458.6958,458.69986,0.463445187,0.943511009,,,,
+1,['scale_params'],411.00845,748.58234,0.454784155,0.298315048,,,,
+1,['flip_params'],5.59E-07,2.03E-07,0.460198164,0.010596991,,,,
+1,['shear_params'],364.33896,364.33896,0.469691038,0.901812315,,,,
+1,['shear_params'],362.84076,362.84073,0.494772911,0.947028875,,,,
+1,['translate_params'],390.62143,390.62067,0.458539009,0.953816891,,,,
+1,['rotate_params'],344.7151,344.71515,0.51477623,0.509277821,,,,
+1,['flip_params'],3.49E-07,4.30E-08,0.460370302,0.006572962,,,,
+1,['rotate_params'],346.40903,346.40897,0.490903616,0.480116844,,,,
+1,['translate_params'],1189.2081,1189.2048,0.459996939,0.82388401,,,,
+1,['translate_params'],360.0043,360.00632,0.49040103,0.96359396,,,,
+1,['rotate_params'],346.04285,346.04282,0.520724058,0.50702405,,,,
+2,['scale_params', 'shear_params'],350.9758,826.986,0.49518013,1.175585032,,,
+2,['flip_params', 'shear_params'],362.90036,362.90036,0.466941833,0.966439247,,,
+2,['flip_params', 'rotate_params'],344.17792,344.17804,0.515645027,0.513900995,,,
+2,['rotate_params', 'translate_params'],352.15472,555.14703,0.489615202,1.371128798,,,
+2,['flip_params', 'scale_params'],364.91214,752.6869,0.458808899,0.336050987,,,
+2,['translate_params', 'scale_params'],414.2113,888.21594,0.45599103,1.057415247,,,
+2,['flip_params', 'rotate_params'],353.58395,353.58398,0.466410875,0.483429193,,,
+2,['shear_params', 'translate_params'],369.87442,655.17645,0.466207981,1.47603488,,,
+2,['scale_params', 'translate_params'],368.08417,841.2316,0.455313921,1.091583014,,,
+2,['shear_params', 'flip_params'],362.4291,362.42905,0.481175184,0.908986092,,,
+2,['rotate_params', 'scale_params'],343.22403,796.8022,0.516406059,0.702515125,,,
+2,['rotate_params', 'flip_params'],348.22073,348.2208,0.58206892,0.544610023,,,
+2,['translate_params', 'flip_params'],249.6218,249.62543,0.457146168,0.903218031,,,
+2,['shear_params', 'flip_params'],362.8931,362.89316,0.490999937,0.931988955,,,
+2,['shear_params', 'flip_params'],361.6721,361.67212,0.464153051,0.944286823,,,
+2,['shear_params', 'rotate_params'],356.81537,561.47565,0.512950182,1.07720089,,,
+2,['flip_params', 'scale_params'],379.3377,734.9306,0.453933954,0.334358215,,,
+2,['flip_params', 'rotate_params'],346.33722,346.3371,0.496101856,0.504961014,,,
+2,['shear_params', 'translate_params'],395.9388,617.0784,0.492998838,1.510235071,,,
+2,['translate_params', 'rotate_params'],347.48856,558.60736,0.67199111,1.557594776,,,
+2,['rotate_params', 'translate_params'],352.65747,553.19055,0.468601942,1.380712271,,,
+2,['translate_params', 'scale_params'],327.59222,813.5809,0.463864088,1.113615036,,,
+2,['flip_params', 'shear_params'],363.01648,363.01636,0.505163193,0.924448967,,,
+2,['shear_params', 'translate_params'],363.39713,550.2033,0.478908062,1.494709969,,,
+2,['scale_params', 'rotate_params'],385.42676,844.70026,0.481059074,0.638164043,,,
+2,['translate_params', 'shear_params'],362.3761,569.2154,0.50633502,1.521008015,,,
+2,['rotate_params', 'translate_params'],1830.5073,1943.8818,0.549512863,1.459937811,,,
+2,['scale_params', 'shear_params'],375.34125,840.00305,0.518671989,1.081494093,,,
+2,['rotate_params', 'shear_params'],355.03436,560.6767,0.608700275,1.190964937,,,
+2,['translate_params', 'scale_params'],335.59113,813.7899,0.460268021,1.118780851,,,
+2,['flip_params', 'rotate_params'],342.76764,342.76767,0.606030703,0.613571882,,,
+2,['scale_params', 'translate_params'],1612.3954,1891.2625,0.455609083,1.138612032,,,
+2,['scale_params', 'rotate_params'],375.08514,814.6195,0.610104799,0.809389114,,,
+2,['scale_params', 'flip_params'],374.26685,729.8434,0.460549116,0.358900309,,,
+2,['translate_params', 'shear_params'],356.61935,576.2907,0.461493015,1.507232904,,,
+2,['rotate_params', 'flip_params'],350.48367,350.4837,0.487596035,0.480093002,,,
+2,['flip_params', 'shear_params'],365.3859,365.38583,0.52487874,0.959614038,,,
+2,['scale_params', 'rotate_params'],346.1585,833.8108,0.597095013,0.774322748,,,
+2,['rotate_params', 'translate_params'],346.7479,542.9496,0.608536243,1.487695932,,,
+2,['flip_params', 'scale_params'],221.37839,650.8623,0.460708141,0.377817154,,,
+2,['scale_params', 'translate_params'],365.42667,806.5624,0.456600904,1.098134995,,,
+2,['rotate_params', 'scale_params'],377.0028,699.7784,0.629970074,0.687487125,,,
+2,['rotate_params', 'translate_params'],344.18878,530.802,0.597533941,1.464951992,,,
+2,['scale_params', 'flip_params'],350.18845,719.00055,0.460777044,0.365110159,,,
+2,['scale_params', 'flip_params'],354.53085,690.27167,0.460210085,0.35922575,,,
+2,['scale_params', 'flip_params'],314.9027,718.4114,0.463848114,0.357250929,,,
+2,['scale_params', 'shear_params'],412.8343,876.53406,0.456253767,1.099639177,,,
+2,['translate_params', 'scale_params'],550.99194,932.8983,0.458665133,1.095408916,,,
+2,['translate_params', 'rotate_params'],344.74484,663.9402,0.498586893,1.35736084,,,
+2,['rotate_params', 'translate_params'],479.9633,579.9561,0.547218084,1.433625221,,,
+3,['flip_params', 'shear_params', 'translate_params'],362.2686,570.5524,0.47794795,1.418212891,,
+3,['rotate_params', 'shear_params', 'translate_params'],345.281,733.8096,0.53552103,2.060005188,,
+3,['translate_params', 'scale_params', 'shear_params'],369.32278,897.587,0.466535091,1.645258904,,
+3,['rotate_params', 'flip_params', 'scale_params'],340.30493,784.96643,0.521136999,0.717830181,,
+3,['shear_params', 'flip_params', 'scale_params'],426.92294,873.69116,0.462899208,1.05384922,,
+3,['shear_params', 'scale_params', 'rotate_params'],1286.8729,1796.7417,0.572583199,1.333627224,,
+3,['translate_params', 'shear_params', 'flip_params'],370.49405,475.6465,0.458060026,1.478237867,,
+3,['rotate_params', 'translate_params', 'scale_params'],378.7197,1486.8618,0.47665,1.515456676,,
+3,['rotate_params', 'shear_params', 'flip_params'],354.55673,555.6044,0.490653992,1.083709955,,
+3,['translate_params', 'flip_params', 'scale_params'],308.26416,753.57385,0.459892988,1.102327108,,
+3,['rotate_params', 'translate_params', 'flip_params'],342.5428,556.3254,0.494558096,1.341644049,,
+3,['rotate_params', 'shear_params', 'flip_params'],347.1409,554.41626,0.606156111,1.148267984,,
+3,['shear_params', 'translate_params', 'rotate_params'],352.79608,672.66864,0.45966506,1.943265915,,
+3,['translate_params', 'scale_params', 'rotate_params'],641.2008,1005.6272,0.48570013,1.643998146,,
+3,['rotate_params', 'flip_params', 'translate_params'],348.25595,632.4312,0.49417901,1.378666639,,
+3,['translate_params', 'flip_params', 'shear_params'],363.89038,665.909,0.465869904,1.477304935,,
+3,['shear_params', 'flip_params', 'rotate_params'],347.54504,737.5183,0.544300795,1.113661051,,
+3,['scale_params', 'translate_params', 'flip_params'],421.3544,833.1528,0.454355001,1.103970051,,
+3,['shear_params', 'translate_params', 'scale_params'],415.00244,971.48376,0.45999074,1.640641928,,
+3,['translate_params', 'flip_params', 'rotate_params'],350.11746,554.10443,0.457614183,1.391341209,,
+3,['flip_params', 'shear_params', 'rotate_params'],346.5604,555.24225,0.565425873,1.195777655,,
+3,['rotate_params', 'shear_params', 'flip_params'],347.44403,554.90393,0.48663497,1.097509146,,
+3,['shear_params', 'rotate_params', 'scale_params'],316.4843,875.17664,0.613386154,1.34348011,,
+3,['flip_params', 'translate_params', 'scale_params'],393.20197,818.84247,0.451754093,1.121178865,,
+3,['scale_params', 'rotate_params', 'flip_params'],365.3614,838.221,0.515646935,0.633874178,,
+3,['shear_params', 'rotate_params', 'scale_params'],360.3942,916.56836,0.459385157,1.190006971,,
+3,['rotate_params', 'shear_params', 'scale_params'],369.1879,944.59186,0.483242035,1.247776985,,
+3,['scale_params', 'flip_params', 'rotate_params'],830.89685,1243.8616,0.463215113,0.678282976,,
+3,['flip_params', 'translate_params', 'scale_params'],368.9381,820.2761,0.466555119,1.102133989,,
+3,['shear_params', 'flip_params', 'rotate_params'],355.9218,562.34564,0.531888962,1.1010921,,
+3,['shear_params', 'flip_params', 'scale_params'],330.76443,784.17694,0.475977898,1.134898186,,
+3,['translate_params', 'rotate_params', 'flip_params'],340.52344,623.40826,0.52295804,1.413661003,,
+3,['scale_params', 'flip_params', 'shear_params'],341.38504,810.85144,0.458909273,1.155375004,,
+3,['flip_params', 'shear_params', 'rotate_params'],355.3193,558.08936,0.513550043,1.084368944,,
+3,['rotate_params', 'flip_params', 'scale_params'],398.85803,827.6458,0.467372894,0.70397687,,
+3,['translate_params', 'rotate_params', 'flip_params'],350.50925,481.9044,0.761942148,1.606066942,,
+3,['scale_params', 'flip_params', 'rotate_params'],603.6992,1091.1133,0.501558065,0.687813997,,
+3,['rotate_params', 'shear_params', 'scale_params'],378.1039,950.70215,0.543140173,1.23424077,,
+3,['shear_params', 'scale_params', 'rotate_params'],364.7644,932.5669,0.456009388,1.171278715,,
+3,['flip_params', 'scale_params', 'shear_params'],372.62247,822.17523,0.497188807,1.089632034,,
+3,['shear_params', 'flip_params', 'scale_params'],367.84314,830.91,0.475941896,1.122347593,,
+3,['scale_params', 'shear_params', 'flip_params'],407.15387,839.3928,0.470598936,1.092720985,,
+3,['rotate_params', 'translate_params', 'shear_params'],2124.5789,2604.0444,0.496346235,1.930746078,,
+3,['shear_params', 'flip_params', 'translate_params'],361.3384,535.7643,0.459724903,1.513983011,,
+3,['scale_params', 'flip_params', 'rotate_params'],2933.158,3102.7578,0.483822823,0.738949776,,
+3,['shear_params', 'scale_params', 'translate_params'],362.6884,923.9111,0.473209143,1.710875988,,
+3,['translate_params', 'shear_params', 'rotate_params'],794.50726,1073.3655,0.45937705,1.999405146,,
+3,['rotate_params', 'shear_params', 'translate_params'],344.427,702.0125,0.571401834,2.043330908,,
+3,['shear_params', 'rotate_params', 'scale_params'],425.86426,985.14453,0.499097109,1.17313695,,
+3,['flip_params', 'shear_params', 'translate_params'],361.02145,506.21762,0.517025709,1.559327126,,
+4,['shear_params', 'flip_params', 'translate_params', 'rotate_params'],836.086,1330.8961,0.495319843,2.000616074,
+4,['shear_params', 'translate_params', 'rotate_params', 'scale_params'],404.7729,1180.6815,0.456604004,2.088243961,
+4,['flip_params', 'shear_params', 'scale_params', 'translate_params'],355.58353,898.724,0.479471922,1.623565912,
+4,['scale_params', 'flip_params', 'shear_params', 'rotate_params'],335.73145,923.7097,0.475409031,1.284471989,
+4,['rotate_params', 'translate_params', 'flip_params', 'shear_params'],356.0202,730.13,0.529458761,1.942954063,
+4,['translate_params', 'flip_params', 'rotate_params', 'shear_params'],352.45404,664.2541,0.555905819,2.040555,
+4,['scale_params', 'flip_params', 'shear_params', 'rotate_params'],361.70184,949.06146,0.458410978,1.237684011,
+4,['shear_params', 'flip_params', 'rotate_params', 'translate_params'],559.19415,1056.475,0.504407167,2.04607892,
+4,['scale_params', 'rotate_params', 'flip_params', 'shear_params'],358.74832,930.2387,0.511438131,1.185974121,
+4,['translate_params', 'flip_params', 'scale_params', 'rotate_params'],306.83475,882.0191,0.474529743,1.601832867,
+4,['rotate_params', 'flip_params', 'scale_params', 'translate_params'],362.8491,937.86285,0.488499403,1.614849806,
+4,['rotate_params', 'shear_params', 'scale_params', 'translate_params'],8987.748,8970.634,0.529761076,2.16527009,
+4,['flip_params', 'rotate_params', 'translate_params', 'scale_params'],364.5403,943.11835,0.496219158,1.509418011,
+4,['flip_params', 'scale_params', 'translate_params', 'rotate_params'],2968.035,3385.8628,0.489986181,1.59779501,
+4,['translate_params', 'scale_params', 'shear_params', 'rotate_params'],373.67273,1059.3557,0.519579887,2.168593884,
+4,['flip_params', 'rotate_params', 'scale_params', 'shear_params'],411.4127,947.1291,0.528845072,1.30127883,
+4,['scale_params', 'rotate_params', 'flip_params', 'shear_params'],368.23465,939.3186,0.493704796,1.330129862,
+4,['flip_params', 'scale_params', 'shear_params', 'rotate_params'],392.24023,826.41595,0.467256069,1.187443256,
+4,['translate_params', 'scale_params', 'shear_params', 'rotate_params'],369.4579,1060.4869,0.465357065,2.134083986,
+4,['flip_params', 'rotate_params', 'scale_params', 'shear_params'],337.55682,895.0205,0.4687078,1.300354004,
+4,['scale_params', 'rotate_params', 'shear_params', 'translate_params'],624.9455,2373.4187,0.660335779,2.270876169,
+4,['shear_params', 'flip_params', 'rotate_params', 'scale_params'],341.92615,899.4765,0.467717886,1.246725321,
+4,['flip_params', 'translate_params', 'rotate_params', 'shear_params'],350.4774,610.11774,0.487537384,1.951164007,
+4,['shear_params', 'translate_params', 'rotate_params', 'scale_params'],372.30585,1587.4742,0.517255783,2.096012115,
+4,['rotate_params', 'flip_params', 'shear_params', 'translate_params'],348.41742,700.352,0.611773014,1.963910103,
+4,['translate_params', 'rotate_params', 'shear_params', 'scale_params'],2421.7878,3020.101,0.638746738,2.231988907,
+4,['shear_params', 'flip_params', 'scale_params', 'rotate_params'],473.54013,997.2284,0.509229183,1.217453241,
+4,['scale_params', 'translate_params', 'rotate_params', 'flip_params'],338.26184,927.3843,0.467775106,1.49259305,
+4,['shear_params', 'translate_params', 'flip_params', 'rotate_params'],362.754,696.5109,0.534731865,1.977665901,
+4,['translate_params', 'rotate_params', 'flip_params', 'scale_params'],382.4642,961.13025,0.480849266,1.517127037,
+4,['scale_params', 'translate_params', 'rotate_params', 'shear_params'],1348.3921,2634.6274,0.495981693,2.185859919,
+4,['scale_params', 'shear_params', 'flip_params', 'translate_params'],386.66315,925.86285,0.465762615,1.674420118,
+4,['translate_params', 'rotate_params', 'flip_params', 'scale_params'],679.8738,1154.5287,0.520852089,1.623335838,
+4,['translate_params', 'shear_params', 'scale_params', 'flip_params'],359.72668,912.4901,0.476821184,1.709049225,
+4,['translate_params', 'flip_params', 'scale_params', 'rotate_params'],972.2698,2820.4155,0.508481979,1.550161362,
+4,['shear_params', 'translate_params', 'rotate_params', 'flip_params'],489.76416,899.0554,0.467331886,1.956539154,
+4,['scale_params', 'rotate_params', 'translate_params', 'flip_params'],347.84256,939.45544,0.513798952,1.541059017,
+4,['flip_params', 'shear_params', 'scale_params', 'rotate_params'],408.56244,982.9074,0.479955912,1.171149015,
+4,['rotate_params', 'flip_params', 'translate_params', 'scale_params'],373.6184,906.3733,0.456655025,1.556658983,
+4,['flip_params', 'rotate_params', 'scale_params', 'shear_params'],2481.9204,2840.014,0.51277113,1.220284939,
+4,['rotate_params', 'shear_params', 'flip_params', 'scale_params'],371.05786,944.41376,0.520441771,1.250173092,
+4,['rotate_params', 'translate_params', 'shear_params', 'scale_params'],374.73627,1024.576,0.571750879,2.284282923,
+4,['scale_params', 'shear_params', 'translate_params', 'flip_params'],1525.5356,1981.2484,0.480939865,1.666984081,
+4,['translate_params', 'rotate_params', 'flip_params', 'scale_params'],584.98376,1037.2928,0.490400314,1.498883247,
+4,['translate_params', 'flip_params', 'scale_params', 'rotate_params'],780.81415,1352.8893,0.666787863,1.65903306,
+4,['flip_params', 'translate_params', 'scale_params', 'rotate_params'],708.8435,1222.2522,0.52953887,1.644255877,
+4,['rotate_params', 'shear_params', 'translate_params', 'flip_params'],364.23166,746.75977,0.464144945,1.981051922,
+4,['translate_params', 'flip_params', 'scale_params', 'shear_params'],350.2862,956.6939,0.467675924,1.73558569,
+4,['flip_params', 'translate_params', 'rotate_params', 'scale_params'],390.0988,955.47974,0.699085236,1.82761693,
+4,['scale_params', 'flip_params', 'translate_params', 'shear_params'],405.60733,838.2523,0.474905729,1.697398901,
+5,['rotate_params', 'flip_params', 'scale_params', 'translate_params', 'shear_params'],308.37958,961.3762,0.652202129,2.389088869
+5,['scale_params', 'shear_params', 'translate_params', 'flip_params', 'rotate_params'],402.1945,1231.5216,0.466905832,2.092958927
+5,['scale_params', 'translate_params', 'shear_params', 'flip_params', 'rotate_params'],359.37558,1023.4182,0.521705866,2.159767866
+5,['translate_params', 'shear_params', 'rotate_params', 'flip_params', 'scale_params'],7272.8755,7488.991,0.470383883,2.24778533
+5,['scale_params', 'rotate_params', 'flip_params', 'translate_params', 'shear_params'],359.8657,957.56287,0.51817894,2.363247156
+5,['translate_params', 'flip_params', 'rotate_params', 'shear_params', 'scale_params'],3446.88,3893.9673,0.648190975,2.280915976
+5,['translate_params', 'flip_params', 'scale_params', 'rotate_params', 'shear_params'],1076.0415,1667.0992,0.525485992,2.136189938
+5,['rotate_params', 'flip_params', 'shear_params', 'scale_params', 'translate_params'],7455.3975,7732.4824,0.554472923,2.298233986
+5,['scale_params', 'shear_params', 'rotate_params', 'translate_params', 'flip_params'],407.28418,1021.1998,0.588479996,2.32090497
+5,['flip_params', 'shear_params', 'scale_params', 'translate_params', 'rotate_params'],400.57623,1035.7108,0.701526165,2.324853897
+5,['rotate_params', 'translate_params', 'flip_params', 'shear_params', 'scale_params'],406.99847,1009.8207,0.533535957,2.166242123
+5,['flip_params', 'translate_params', 'scale_params', 'rotate_params', 'shear_params'],5483.6562,5921.9976,0.496645689,2.341841936
+5,['shear_params', 'flip_params', 'rotate_params', 'translate_params', 'scale_params'],381.469,1108.4061,0.723203182,2.439934254
+5,['translate_params', 'flip_params', 'rotate_params', 'shear_params', 'scale_params'],4326.147,4833.607,0.492520094,2.123345852
+5,['flip_params', 'rotate_params', 'shear_params', 'scale_params', 'translate_params'],394.68707,1066.7333,0.496125937,2.10934782
+5,['scale_params', 'shear_params', 'flip_params', 'rotate_params', 'translate_params'],3508.8682,3912.6252,0.485945225,2.162300825
+5,['translate_params', 'flip_params', 'shear_params', 'scale_params', 'rotate_params'],3521.4612,4060.1948,0.511597157,2.287133217
+5,['translate_params', 'scale_params', 'rotate_params', 'shear_params', 'flip_params'],441.03766,1084.2864,0.482060194,2.381078005
+5,['scale_params', 'shear_params', 'translate_params', 'rotate_params', 'flip_params'],329.2838,987.5887,0.479802132,2.170232058
+5,['flip_params', 'rotate_params', 'shear_params', 'translate_params', 'scale_params'],434.76498,1067.4824,0.52813077,2.154177189
+5,['flip_params', 'rotate_params', 'translate_params', 'scale_params', 'shear_params'],1847.2828,2437.4785,0.475082874,2.155906916
+5,['flip_params', 'translate_params', 'rotate_params', 'scale_params', 'shear_params'],418.41302,1435.4681,0.465251923,2.138345003
+5,['rotate_params', 'flip_params', 'shear_params', 'scale_params', 'translate_params'],371.7751,1066.9938,0.482849121,2.165094852
+5,['flip_params', 'scale_params', 'translate_params', 'shear_params', 'rotate_params'],834.1905,1356.2913,0.625398636,2.306064129
+5,['shear_params', 'flip_params', 'rotate_params', 'translate_params', 'scale_params'],524.6858,1344.6664,0.520976067,2.148367167
+5,['flip_params', 'shear_params', 'scale_params', 'rotate_params', 'translate_params'],2018.7112,2563.139,0.534024954,2.20761776
+5,['translate_params', 'flip_params', 'shear_params', 'scale_params', 'rotate_params'],2539.0469,2983.2014,0.50246501,2.152569056
+5,['scale_params', 'rotate_params', 'translate_params', 'shear_params', 'flip_params'],407.49866,1071.6422,0.505213022,2.176227093
+5,['translate_params', 'shear_params', 'flip_params', 'rotate_params', 'scale_params'],319.2226,972.4573,0.507621765,2.278165102
+5,['translate_params', 'rotate_params', 'flip_params', 'scale_params', 'shear_params'],368.03412,1263.8917,0.483834982,2.160251141
+5,['shear_params', 'scale_params', 'translate_params', 'rotate_params', 'flip_params'],687.0524,3164.9883,0.51229167,2.166100979
+5,['flip_params', 'rotate_params', 'shear_params', 'translate_params', 'scale_params'],1236.7429,1684.014,0.520215034,2.361411095
+5,['flip_params', 'translate_params', 'shear_params', 'scale_params', 'rotate_params'],382.60464,1598.9886,0.477101803,2.206400156
+5,['rotate_params', 'flip_params', 'translate_params', 'shear_params', 'scale_params'],345.0082,1005.1446,0.483838081,2.184144735
+5,['scale_params', 'rotate_params', 'translate_params', 'flip_params', 'shear_params'],1528.1102,2070.3599,0.508121014,2.236264229
+5,['scale_params', 'shear_params', 'translate_params', 'flip_params', 'rotate_params'],2183.9058,2629.477,0.552550077,2.32387805
+5,['scale_params', 'rotate_params', 'shear_params', 'flip_params', 'translate_params'],350.384,1014.3986,0.48574996,2.304780006
+5,['translate_params', 'scale_params', 'shear_params', 'flip_params', 'rotate_params'],355.27695,1012.4075,0.51552701,2.250570059
+5,['shear_params', 'scale_params', 'translate_params', 'rotate_params', 'flip_params'],422.91287,1321.9774,0.498306036,2.204409838
+5,['shear_params', 'translate_params', 'rotate_params', 'flip_params', 'scale_params'],4810.152,6004.4697,0.505806208,2.158401966
+5,['scale_params', 'flip_params', 'translate_params', 'shear_params', 'rotate_params'],1588.6249,2198.2927,0.466810226,2.310477972
+5,['rotate_params', 'flip_params', 'shear_params', 'translate_params', 'scale_params'],384.93674,1090.0103,0.487010956,2.101423979
+5,['scale_params', 'flip_params', 'translate_params', 'rotate_params', 'shear_params'],416.6988,1340.4879,0.510236025,2.16166091
+5,['flip_params', 'translate_params', 'scale_params', 'shear_params', 'rotate_params'],335.4355,991.8776,0.535078287,2.227989912
+5,['rotate_params', 'scale_params', 'flip_params', 'translate_params', 'shear_params'],880.8017,1461.3619,0.640153885,2.362837076
+5,['translate_params', 'shear_params', 'rotate_params', 'flip_params', 'scale_params'],328.10025,1008.7015,0.506676912,2.130466938
+5,['rotate_params', 'scale_params', 'shear_params', 'translate_params', 'flip_params'],398.95374,1077.8374,0.474556923,2.119457006
+5,['translate_params', 'rotate_params', 'flip_params', 'scale_params', 'shear_params'],378.0388,1046.0935,0.54591012,2.229669094
+5,['shear_params', 'rotate_params', 'scale_params', 'flip_params', 'translate_params'],1415.7305,2181.2925,0.502919912,2.185636997
+5,['translate_params', 'shear_params', 'scale_params', 'flip_params', 'rotate_params'],894.05426,1440.6112,0.505397081,2.187815905

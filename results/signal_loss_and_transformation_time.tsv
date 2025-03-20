@@ -1,0 +1,251 @@
+n_params	params	my_signal_loss	monai_signal_loss	my_time	monai_time
+1	['flip_params']	0.0	0.0	0.014373779296875	0.002774953842163086
+1	['translate_params']	469.27362	469.27557	0.5818266868591309	0.9375958442687988
+1	['rotate_params']	344.5216	344.5216	0.6186180114746094	0.5959749221801758
+1	['flip_params']	5.5946276e-07	2.0300288e-07	0.47083401679992676	0.011090993881225586
+1	['rotate_params']	341.75797	341.75797	0.594630241394043	0.5968191623687744
+1	['rotate_params']	345.18222	345.18216	0.46920180320739746	0.46654415130615234
+1	['rotate_params']	349.19083	349.1908	0.5362458229064941	0.5307788848876953
+1	['scale_params']	356.63214	724.9717	0.4665791988372803	0.3768179416656494
+1	['translate_params']	352.28967	352.29184	0.4716489315032959	1.1007139682769775
+1	['flip_params']	3.4927888e-07	4.301584e-08	0.4743218421936035	0.006970882415771484
+1	['flip_params']	5.5946276e-07	2.0300288e-07	0.46723413467407227	0.011581897735595703
+1	['rotate_params']	343.74683	343.7468	0.6023857593536377	0.5946500301361084
+1	['translate_params']	589.3269	589.3277	0.46006107330322266	0.9781038761138916
+1	['shear_params']	366.42984	366.42987	0.47923803329467773	0.9509868621826172
+1	['scale_params']	347.59927	709.3605	0.46663904190063477	0.35894012451171875
+1	['rotate_params']	347.45325	347.45334	0.5182778835296631	0.5459818840026855
+1	['shear_params']	364.71548	364.71545	0.476853609085083	0.9406259059906006
+1	['flip_params']	4.318899e-07	1.3283291e-07	0.4647543430328369	0.006924152374267578
+1	['shear_params']	364.35373	364.35367	0.484576940536499	0.9972927570343018
+1	['shear_params']	361.35638	361.35632	0.4968140125274658	1.0136783123016357
+1	['shear_params']	360.9599	360.95984	0.5224051475524902	0.9522449970245361
+1	['scale_params']	359.6342	683.9139	0.46108317375183105	0.3451547622680664
+1	['flip_params']	4.318899e-07	1.3283291e-07	0.4629640579223633	0.007142782211303711
+1	['translate_params']	264.7154	264.714	0.46236705780029297	0.9288547039031982
+1	['scale_params']	363.56073	708.0974	0.4659700393676758	0.34438610076904297
+1	['rotate_params']	346.31818	346.31818	0.5710611343383789	0.5567479133605957
+1	['rotate_params']	343.77042	343.77036	0.5395612716674805	0.525277853012085
+1	['translate_params']	528.14886	528.14465	0.4704470634460449	0.8886408805847168
+1	['rotate_params']	345.56183	345.56183	0.5237011909484863	0.5121011734008789
+1	['rotate_params']	342.0557	342.0557	0.572166919708252	0.5605409145355225
+1	['flip_params']	0.0	0.0	0.006718873977661133	0.002789735794067383
+1	['rotate_params']	347.95325	347.9532	0.5699717998504639	0.5507190227508545
+1	['shear_params']	362.63693	362.63702	0.471782922744751	0.9617757797241211
+1	['scale_params']	287.29745	703.715	0.4621748924255371	0.35451483726501465
+1	['rotate_params']	346.37378	346.37375	0.6889150142669678	0.636664867401123
+1	['rotate_params']	345.4979	345.49783	0.5051651000976562	0.4794182777404785
+1	['shear_params']	361.05548	361.05548	0.5170180797576904	0.988429069519043
+1	['rotate_params']	342.22778	342.22772	0.4887549877166748	0.4810769557952881
+1	['translate_params']	458.6958	458.69986	0.46616601943969727	0.9448447227478027
+1	['scale_params']	411.00845	748.58234	0.4610109329223633	0.301145076751709
+1	['flip_params']	5.5946276e-07	2.0300288e-07	0.46854591369628906	0.01116800308227539
+1	['shear_params']	364.33896	364.33896	0.47757482528686523	0.9583568572998047
+1	['shear_params']	362.84076	362.84073	0.5053019523620605	0.9400200843811035
+1	['translate_params']	390.62143	390.62067	0.47475504875183105	0.9454350471496582
+1	['rotate_params']	344.7151	344.71515	0.5246090888977051	0.5361979007720947
+1	['flip_params']	3.4927888e-07	4.301584e-08	0.47117185592651367	0.007898092269897461
+1	['rotate_params']	346.40903	346.40897	0.5687379837036133	0.525460958480835
+1	['translate_params']	1189.2081	1189.2048	0.4602499008178711	0.8202998638153076
+1	['translate_params']	360.0043	360.00632	0.4731171131134033	0.9463920593261719
+1	['rotate_params']	346.04285	346.04282	0.5316319465637207	0.49562501907348633
+2	['scale_params', 'shear_params']	350.9758	826.986	0.4965221881866455	1.162842035293579
+2	['flip_params', 'shear_params']	362.90036	362.90036	0.4817230701446533	0.9432487487792969
+2	['flip_params', 'rotate_params']	344.17792	344.17804	0.5324850082397461	0.5252511501312256
+2	['rotate_params', 'translate_params']	352.15472	555.14703	0.5396039485931396	1.403217077255249
+2	['flip_params', 'scale_params']	364.91214	752.6869	0.4610280990600586	0.34042859077453613
+2	['translate_params', 'scale_params']	414.2113	888.21594	0.4593830108642578	1.0368399620056152
+2	['flip_params', 'rotate_params']	353.58395	353.58398	0.4701719284057617	0.48459696769714355
+2	['shear_params', 'translate_params']	369.87442	655.17645	0.4686861038208008	1.464660882949829
+2	['scale_params', 'translate_params']	368.08417	841.2316	0.46874284744262695	1.0929291248321533
+2	['shear_params', 'flip_params']	362.4291	362.42905	0.4853529930114746	0.9220151901245117
+2	['rotate_params', 'scale_params']	343.22403	796.8022	0.5203680992126465	0.7114720344543457
+2	['rotate_params', 'flip_params']	348.22073	348.2208	0.5802559852600098	0.546205997467041
+2	['translate_params', 'flip_params']	249.6218	249.62543	0.47251296043395996	0.9473879337310791
+2	['shear_params', 'flip_params']	362.8931	362.89316	0.5111899375915527	0.964573860168457
+2	['shear_params', 'flip_params']	361.6721	361.67212	0.4778580665588379	0.9808030128479004
+2	['shear_params', 'rotate_params']	356.81537	561.47565	0.530228853225708	1.110872745513916
+2	['flip_params', 'scale_params']	379.3377	734.9306	0.46423792839050293	0.3464372158050537
+2	['flip_params', 'rotate_params']	346.33722	346.3371	0.5085272789001465	0.50288987159729
+2	['shear_params', 'translate_params']	395.9388	617.0784	0.5046539306640625	1.5127270221710205
+2	['translate_params', 'rotate_params']	347.48856	558.60736	0.6953921318054199	1.677586317062378
+2	['rotate_params', 'translate_params']	352.65747	553.19055	0.4851858615875244	1.4124352931976318
+2	['translate_params', 'scale_params']	327.59222	813.5809	0.47026705741882324	1.2338879108428955
+2	['flip_params', 'shear_params']	363.01648	363.01636	0.5308048725128174	0.9400262832641602
+2	['shear_params', 'translate_params']	363.39713	550.2033	0.4856278896331787	1.5407729148864746
+2	['scale_params', 'rotate_params']	385.42676	844.70026	0.49080777168273926	0.6409180164337158
+2	['translate_params', 'shear_params']	362.3761	569.2154	0.5140388011932373	1.5703001022338867
+2	['rotate_params', 'translate_params']	1830.5073	1943.8818	0.5704901218414307	1.46219801902771
+2	['scale_params', 'shear_params']	375.34125	840.00305	0.5229570865631104	1.0792608261108398
+2	['rotate_params', 'shear_params']	355.03436	560.6767	0.6522610187530518	1.2091119289398193
+2	['translate_params', 'scale_params']	335.59113	813.7899	0.468853235244751	1.124135971069336
+2	['flip_params', 'rotate_params']	342.76764	342.76767	0.6076531410217285	0.6347830295562744
+2	['scale_params', 'translate_params']	1612.3954	1891.2625	0.45684266090393066	1.1640920639038086
+2	['scale_params', 'rotate_params']	375.08514	814.6195	0.6096518039703369	0.8495848178863525
+2	['scale_params', 'flip_params']	374.26685	729.8434	0.4695448875427246	0.36243367195129395
+2	['translate_params', 'shear_params']	356.61935	576.2907	0.4708850383758545	1.5479469299316406
+2	['rotate_params', 'flip_params']	350.48367	350.4837	0.5201981067657471	0.5180389881134033
+2	['flip_params', 'shear_params']	365.3859	365.38583	0.5313389301300049	0.977283239364624
+2	['scale_params', 'rotate_params']	346.1585	833.8108	0.6024017333984375	0.7632670402526855
+2	['rotate_params', 'translate_params']	346.7479	542.9496	0.6082229614257812	1.5181169509887695
+2	['flip_params', 'scale_params']	221.37839	650.8623	0.4702262878417969	0.3828849792480469
+2	['scale_params', 'translate_params']	365.42667	806.5624	0.46825098991394043	1.1172349452972412
+2	['rotate_params', 'scale_params']	377.0028	699.7784	0.6484262943267822	0.6822431087493896
+2	['rotate_params', 'translate_params']	344.18878	530.802	0.625295877456665	1.4761359691619873
+2	['scale_params', 'flip_params']	350.18845	719.00055	0.4694812297821045	0.3727281093597412
+2	['scale_params', 'flip_params']	354.53085	690.27167	0.4744551181793213	0.36558008193969727
+2	['scale_params', 'flip_params']	314.9027	718.4114	0.46825385093688965	0.3663930892944336
+2	['scale_params', 'shear_params']	412.8343	876.53406	0.46997499465942383	1.13447904586792
+2	['translate_params', 'scale_params']	550.99194	932.8983	0.46080589294433594	1.1117048263549805
+2	['translate_params', 'rotate_params']	344.74484	663.9402	0.5068099498748779	1.4496099948883057
+2	['rotate_params', 'translate_params']	479.9633	579.9561	0.5879979133605957	1.4445881843566895
+3	['flip_params', 'shear_params', 'translate_params']	362.2686	570.5524	0.4847068786621094	1.4384570121765137
+3	['rotate_params', 'shear_params', 'translate_params']	345.281	733.8096	0.5762579441070557	2.0556139945983887
+3	['translate_params', 'scale_params', 'shear_params']	369.32278	897.587	0.4744720458984375	1.6974167823791504
+3	['rotate_params', 'flip_params', 'scale_params']	340.30493	784.96643	0.5346872806549072	0.730767011642456
+3	['shear_params', 'flip_params', 'scale_params']	426.92294	873.69116	0.478924036026001	1.0871150493621826
+3	['shear_params', 'scale_params', 'rotate_params']	1286.8729	1796.7417	0.5904676914215088	1.3736939430236816
+3	['translate_params', 'shear_params', 'flip_params']	370.49405	475.6465	0.469074010848999	1.4999916553497314
+3	['rotate_params', 'translate_params', 'scale_params']	378.7197	1486.8618	0.48468613624572754	1.526991844177246
+3	['rotate_params', 'shear_params', 'flip_params']	354.55673	555.6044	0.49797773361206055	1.087388277053833
+3	['translate_params', 'flip_params', 'scale_params']	308.26416	753.57385	0.47017598152160645	1.124500036239624
+3	['rotate_params', 'translate_params', 'flip_params']	342.5428	556.3254	0.4996471405029297	1.3529460430145264
+3	['rotate_params', 'shear_params', 'flip_params']	347.1409	554.41626	0.6205272674560547	1.1494500637054443
+3	['shear_params', 'translate_params', 'rotate_params']	352.79608	672.66864	0.4700641632080078	1.9966871738433838
+3	['translate_params', 'scale_params', 'rotate_params']	641.2008	1005.6272	0.520125150680542	1.6690092086791992
+3	['rotate_params', 'flip_params', 'translate_params']	348.25595	632.4312	0.5033290386199951	1.3900458812713623
+3	['translate_params', 'flip_params', 'shear_params']	363.89038	665.909	0.4728739261627197	1.5005102157592773
+3	['shear_params', 'flip_params', 'rotate_params']	347.54504	737.5183	0.5648398399353027	1.1616263389587402
+3	['scale_params', 'translate_params', 'flip_params']	421.3544	833.1528	0.4675900936126709	1.1518371105194092
+3	['shear_params', 'translate_params', 'scale_params']	415.00244	971.48376	0.47898387908935547	1.7400691509246826
+3	['translate_params', 'flip_params', 'rotate_params']	350.11746	554.10443	0.4650852680206299	1.4020419120788574
+3	['flip_params', 'shear_params', 'rotate_params']	346.5604	555.24225	0.5653619766235352	1.2340309619903564
+3	['rotate_params', 'shear_params', 'flip_params']	347.44403	554.90393	0.4939877986907959	1.0904359817504883
+3	['shear_params', 'rotate_params', 'scale_params']	316.4843	875.17664	0.6016860008239746	1.3752079010009766
+3	['flip_params', 'translate_params', 'scale_params']	393.20197	818.84247	0.4591658115386963	1.12760591506958
+3	['scale_params', 'rotate_params', 'flip_params']	365.3614	838.221	0.5163860321044922	0.6474919319152832
+3	['shear_params', 'rotate_params', 'scale_params']	360.3942	916.56836	0.47164011001586914	1.2236502170562744
+3	['rotate_params', 'shear_params', 'scale_params']	369.1879	944.59186	0.5138158798217773	1.2742750644683838
+3	['scale_params', 'flip_params', 'rotate_params']	830.89685	1243.8616	0.46842408180236816	0.6831998825073242
+3	['flip_params', 'translate_params', 'scale_params']	368.9381	820.2761	0.474668025970459	1.1212852001190186
+3	['shear_params', 'flip_params', 'rotate_params']	355.9218	562.34564	0.5340299606323242	1.1977968215942383
+3	['shear_params', 'flip_params', 'scale_params']	330.76443	784.17694	0.4963200092315674	1.1968412399291992
+3	['translate_params', 'rotate_params', 'flip_params']	340.52344	623.40826	0.5511250495910645	1.4963059425354004
+3	['scale_params', 'flip_params', 'shear_params']	341.38504	810.85144	0.47002410888671875	1.1763477325439453
+3	['flip_params', 'shear_params', 'rotate_params']	355.3193	558.08936	0.5224699974060059	1.1103408336639404
+3	['rotate_params', 'flip_params', 'scale_params']	398.85803	827.6458	0.4771609306335449	0.7096917629241943
+3	['translate_params', 'rotate_params', 'flip_params']	350.50925	481.9044	0.7679488658905029	1.625838041305542
+3	['scale_params', 'flip_params', 'rotate_params']	603.6992	1091.1133	0.5063769817352295	0.6980340480804443
+3	['rotate_params', 'shear_params', 'scale_params']	378.1039	950.70215	0.5297448635101318	1.2404470443725586
+3	['shear_params', 'scale_params', 'rotate_params']	364.7644	932.5669	0.467242956161499	1.1866397857666016
+3	['flip_params', 'scale_params', 'shear_params']	372.62247	822.17523	0.5022478103637695	1.0812039375305176
+3	['shear_params', 'flip_params', 'scale_params']	367.84314	830.91	0.4784660339355469	1.124474048614502
+3	['scale_params', 'shear_params', 'flip_params']	407.15387	839.3928	0.49489903450012207	1.106421947479248
+3	['rotate_params', 'translate_params', 'shear_params']	2124.5789	2604.0444	0.5057930946350098	1.95955491065979
+3	['shear_params', 'flip_params', 'translate_params']	361.3384	535.7643	0.46358704566955566	1.5557477474212646
+3	['scale_params', 'flip_params', 'rotate_params']	2933.158	3102.7578	0.4933178424835205	0.7521798610687256
+3	['shear_params', 'scale_params', 'translate_params']	362.6884	923.9111	0.47734618186950684	1.8681328296661377
+3	['translate_params', 'shear_params', 'rotate_params']	794.50726	1073.3655	0.4755263328552246	2.0536069869995117
+3	['rotate_params', 'shear_params', 'translate_params']	344.427	702.0125	0.5712049007415771	2.0440850257873535
+3	['shear_params', 'rotate_params', 'scale_params']	425.86426	985.14453	0.5090999603271484	1.1861741542816162
+3	['flip_params', 'shear_params', 'translate_params']	361.02145	506.21762	0.526068925857544	1.5831022262573242
+4	['shear_params', 'flip_params', 'translate_params', 'rotate_params']	836.086	1330.8961	0.5002627372741699	2.0861098766326904
+4	['shear_params', 'translate_params', 'rotate_params', 'scale_params']	404.7729	1180.6815	0.4818282127380371	2.155441999435425
+4	['flip_params', 'shear_params', 'scale_params', 'translate_params']	355.58353	898.724	0.4964311122894287	1.6375102996826172
+4	['scale_params', 'flip_params', 'shear_params', 'rotate_params']	335.73145	923.7097	0.49105191230773926	1.304847002029419
+4	['rotate_params', 'translate_params', 'flip_params', 'shear_params']	356.0202	730.13	0.5334489345550537	1.9602649211883545
+4	['translate_params', 'flip_params', 'rotate_params', 'shear_params']	352.45404	664.2541	0.5443847179412842	2.064450263977051
+4	['scale_params', 'flip_params', 'shear_params', 'rotate_params']	361.70184	949.06146	0.46698617935180664	1.2499682903289795
+4	['shear_params', 'flip_params', 'rotate_params', 'translate_params']	559.19415	1056.475	0.5173656940460205	2.0621728897094727
+4	['scale_params', 'rotate_params', 'flip_params', 'shear_params']	358.74832	930.2387	0.5283529758453369	1.1940460205078125
+4	['translate_params', 'flip_params', 'scale_params', 'rotate_params']	306.83475	882.0191	0.4920310974121094	1.586364984512329
+4	['rotate_params', 'flip_params', 'scale_params', 'translate_params']	362.8491	937.86285	0.5012831687927246	1.6220049858093262
+4	['rotate_params', 'shear_params', 'scale_params', 'translate_params']	8987.748	8970.634	0.550555944442749	2.393627882003784
+4	['flip_params', 'rotate_params', 'translate_params', 'scale_params']	364.5403	943.11835	0.5124099254608154	1.5870718955993652
+4	['flip_params', 'scale_params', 'translate_params', 'rotate_params']	2968.035	3385.8628	0.5003812313079834	1.6489789485931396
+4	['translate_params', 'scale_params', 'shear_params', 'rotate_params']	373.67273	1059.3557	0.5450780391693115	2.325657844543457
+4	['flip_params', 'rotate_params', 'scale_params', 'shear_params']	411.4127	947.1291	0.5929648876190186	1.346487045288086
+4	['scale_params', 'rotate_params', 'flip_params', 'shear_params']	368.23465	939.3186	0.512092113494873	1.3605268001556396
+4	['flip_params', 'scale_params', 'shear_params', 'rotate_params']	392.24023	826.41595	0.47123265266418457	1.1923449039459229
+4	['translate_params', 'scale_params', 'shear_params', 'rotate_params']	369.4579	1060.4869	0.48511815071105957	2.18764591217041
+4	['flip_params', 'rotate_params', 'scale_params', 'shear_params']	337.55682	895.0205	0.47382521629333496	1.2994489669799805
+4	['scale_params', 'rotate_params', 'shear_params', 'translate_params']	624.9455	2373.4187	0.6734509468078613	2.3073439598083496
+4	['shear_params', 'flip_params', 'rotate_params', 'scale_params']	341.92615	899.4765	0.4848508834838867	1.3168408870697021
+4	['flip_params', 'translate_params', 'rotate_params', 'shear_params']	350.4774	610.11774	0.5128180980682373	1.9851930141448975
+4	['shear_params', 'translate_params', 'rotate_params', 'scale_params']	372.30585	1587.4742	0.5274112224578857	2.215851068496704
+4	['rotate_params', 'flip_params', 'shear_params', 'translate_params']	348.41742	700.352	0.681318998336792	2.09437894821167
+4	['translate_params', 'rotate_params', 'shear_params', 'scale_params']	2421.7878	3020.101	0.6373441219329834	2.34543776512146
+4	['shear_params', 'flip_params', 'scale_params', 'rotate_params']	473.54013	997.2284	0.5441358089447021	1.2853460311889648
+4	['scale_params', 'translate_params', 'rotate_params', 'flip_params']	338.26184	927.3843	0.4813687801361084	1.582061767578125
+4	['shear_params', 'translate_params', 'flip_params', 'rotate_params']	362.754	696.5109	0.5742852687835693	2.0130276679992676
+4	['translate_params', 'rotate_params', 'flip_params', 'scale_params']	382.4642	961.13025	0.5114939212799072	1.5639910697937012
+4	['scale_params', 'translate_params', 'rotate_params', 'shear_params']	1348.3921	2634.6274	0.49521613121032715	2.283730983734131
+4	['scale_params', 'shear_params', 'flip_params', 'translate_params']	386.66315	925.86285	0.4887969493865967	1.7122201919555664
+4	['translate_params', 'rotate_params', 'flip_params', 'scale_params']	679.8738	1154.5287	0.5460143089294434	1.6611649990081787
+4	['translate_params', 'shear_params', 'scale_params', 'flip_params']	359.72668	912.4901	0.5003540515899658	1.748711109161377
+4	['translate_params', 'flip_params', 'scale_params', 'rotate_params']	972.2698	2820.4155	0.5022680759429932	1.570176124572754
+4	['shear_params', 'translate_params', 'rotate_params', 'flip_params']	489.76416	899.0554	0.4831080436706543	1.9794330596923828
+4	['scale_params', 'rotate_params', 'translate_params', 'flip_params']	347.84256	939.45544	0.5130960941314697	1.552292823791504
+4	['flip_params', 'shear_params', 'scale_params', 'rotate_params']	408.56244	982.9074	0.4975879192352295	1.2090680599212646
+4	['rotate_params', 'flip_params', 'translate_params', 'scale_params']	373.6184	906.3733	0.47411084175109863	1.6248209476470947
+4	['flip_params', 'rotate_params', 'scale_params', 'shear_params']	2481.9204	2840.014	0.554663896560669	1.2569069862365723
+4	['rotate_params', 'shear_params', 'flip_params', 'scale_params']	371.05786	944.41376	0.5550410747528076	1.3039159774780273
+4	['rotate_params', 'translate_params', 'shear_params', 'scale_params']	374.73627	1024.576	0.6008648872375488	2.3056840896606445
+4	['scale_params', 'shear_params', 'translate_params', 'flip_params']	1525.5356	1981.2484	0.4903998374938965	1.6556410789489746
+4	['translate_params', 'rotate_params', 'flip_params', 'scale_params']	584.98376	1037.2928	0.4974799156188965	1.5130829811096191
+4	['translate_params', 'flip_params', 'scale_params', 'rotate_params']	780.81415	1352.8893	0.6711490154266357	1.687615156173706
+4	['flip_params', 'translate_params', 'scale_params', 'rotate_params']	708.8435	1222.2522	0.5404648780822754	1.6628849506378174
+4	['rotate_params', 'shear_params', 'translate_params', 'flip_params']	364.23166	746.75977	0.47039318084716797	1.9959521293640137
+4	['translate_params', 'flip_params', 'scale_params', 'shear_params']	350.2862	956.6939	0.47246313095092773	1.7275769710540771
+4	['flip_params', 'translate_params', 'rotate_params', 'scale_params']	390.0988	955.47974	0.6862051486968994	1.7959070205688477
+4	['scale_params', 'flip_params', 'translate_params', 'shear_params']	405.60733	838.2523	0.47263002395629883	1.598526954650879
+5	['rotate_params', 'flip_params', 'scale_params', 'translate_params', 'shear_params']	308.37958	961.3762	0.6134133338928223	2.2092599868774414
+5	['scale_params', 'shear_params', 'translate_params', 'flip_params', 'rotate_params']	402.1945	1231.5216	0.46904516220092773	2.1300559043884277
+5	['scale_params', 'translate_params', 'shear_params', 'flip_params', 'rotate_params']	359.37558	1023.4182	0.5143849849700928	2.1765620708465576
+5	['translate_params', 'shear_params', 'rotate_params', 'flip_params', 'scale_params']	7272.8755	7488.991	0.4719521999359131	2.1676831245422363
+5	['scale_params', 'rotate_params', 'flip_params', 'translate_params', 'shear_params']	359.8657	957.56287	0.4816310405731201	2.1229248046875
+5	['translate_params', 'flip_params', 'rotate_params', 'shear_params', 'scale_params']	3446.88	3893.9673	0.5722739696502686	2.3333897590637207
+5	['translate_params', 'flip_params', 'scale_params', 'rotate_params', 'shear_params']	1076.0415	1667.0992	0.5384907722473145	2.2746310234069824
+5	['rotate_params', 'flip_params', 'shear_params', 'scale_params', 'translate_params']	7455.3975	7732.4824	0.5151739120483398	2.169945001602173
+5	['scale_params', 'shear_params', 'rotate_params', 'translate_params', 'flip_params']	407.28418	1021.1998	0.5614469051361084	2.2099831104278564
+5	['flip_params', 'shear_params', 'scale_params', 'translate_params', 'rotate_params']	400.57623	1035.7108	0.5139269828796387	2.161435842514038
+5	['rotate_params', 'translate_params', 'flip_params', 'shear_params', 'scale_params']	406.99847	1009.8207	0.5408589839935303	2.1683270931243896
+5	['flip_params', 'translate_params', 'scale_params', 'rotate_params', 'shear_params']	5483.6562	5921.9976	0.5014667510986328	2.201568126678467
+5	['shear_params', 'flip_params', 'rotate_params', 'translate_params', 'scale_params']	381.469	1108.4061	0.6152138710021973	2.1962788105010986
+5	['translate_params', 'flip_params', 'rotate_params', 'shear_params', 'scale_params']	4326.147	4833.607	0.49409008026123047	2.1236279010772705
+5	['flip_params', 'rotate_params', 'shear_params', 'scale_params', 'translate_params']	394.68707	1066.7333	0.5177483558654785	2.124207019805908
+5	['scale_params', 'shear_params', 'flip_params', 'rotate_params', 'translate_params']	3508.8682	3912.6252	0.48796582221984863	2.176851749420166
+5	['translate_params', 'flip_params', 'shear_params', 'scale_params', 'rotate_params']	3521.4612	4060.1948	0.49582791328430176	2.1069719791412354
+5	['translate_params', 'scale_params', 'rotate_params', 'shear_params', 'flip_params']	441.03766	1084.2864	0.5018980503082275	2.2766897678375244
+5	['scale_params', 'shear_params', 'translate_params', 'rotate_params', 'flip_params']	329.2838	987.5887	0.48258304595947266	2.1788809299468994
+5	['flip_params', 'rotate_params', 'shear_params', 'translate_params', 'scale_params']	434.76498	1067.4824	0.5340762138366699	2.14229679107666
+5	['flip_params', 'rotate_params', 'translate_params', 'scale_params', 'shear_params']	1847.2828	2437.4785	0.47249293327331543	2.183635950088501
+5	['flip_params', 'translate_params', 'rotate_params', 'scale_params', 'shear_params']	418.41302	1435.4681	0.4633631706237793	2.13196063041687
+5	['rotate_params', 'flip_params', 'shear_params', 'scale_params', 'translate_params']	371.7751	1066.9938	0.48432326316833496	2.1469950675964355
+5	['flip_params', 'scale_params', 'translate_params', 'shear_params', 'rotate_params']	834.1905	1356.2913	0.574404239654541	2.217660903930664
+5	['shear_params', 'flip_params', 'rotate_params', 'translate_params', 'scale_params']	524.6858	1344.6664	0.5240252017974854	2.0855979919433594
+5	['flip_params', 'shear_params', 'scale_params', 'rotate_params', 'translate_params']	2018.7112	2563.139	0.5257248878479004	2.191349983215332
+5	['translate_params', 'flip_params', 'shear_params', 'scale_params', 'rotate_params']	2539.0469	2983.2014	0.4838259220123291	2.1144468784332275
+5	['scale_params', 'rotate_params', 'translate_params', 'shear_params', 'flip_params']	407.49866	1071.6422	0.4963698387145996	2.1259007453918457
+5	['translate_params', 'shear_params', 'flip_params', 'rotate_params', 'scale_params']	319.2226	972.4573	0.4974558353424072	2.1574268341064453
+5	['translate_params', 'rotate_params', 'flip_params', 'scale_params', 'shear_params']	368.03412	1263.8917	0.4606499671936035	2.121366024017334
+5	['shear_params', 'scale_params', 'translate_params', 'rotate_params', 'flip_params']	687.0524	3164.9883	0.5045807361602783	2.0805680751800537
+5	['flip_params', 'rotate_params', 'shear_params', 'translate_params', 'scale_params']	1236.7429	1684.014	0.5089778900146484	2.258194923400879
+5	['flip_params', 'translate_params', 'shear_params', 'scale_params', 'rotate_params']	382.60464	1598.9886	0.49239110946655273	2.2811079025268555
+5	['rotate_params', 'flip_params', 'translate_params', 'shear_params', 'scale_params']	345.0082	1005.1446	0.4900369644165039	2.123476982116699
+5	['scale_params', 'rotate_params', 'translate_params', 'flip_params', 'shear_params']	1528.1102	2070.3599	0.5067148208618164	2.24704909324646
+5	['scale_params', 'shear_params', 'translate_params', 'flip_params', 'rotate_params']	2183.9058	2629.477	0.558147668838501	2.2270288467407227
+5	['scale_params', 'rotate_params', 'shear_params', 'flip_params', 'translate_params']	350.384	1014.3986	0.46846580505371094	2.2085912227630615
+5	['translate_params', 'scale_params', 'shear_params', 'flip_params', 'rotate_params']	355.27695	1012.4075	0.5031721591949463	2.170095205307007
+5	['shear_params', 'scale_params', 'translate_params', 'rotate_params', 'flip_params']	422.91287	1321.9774	0.48000168800354004	2.271963119506836
+5	['shear_params', 'translate_params', 'rotate_params', 'flip_params', 'scale_params']	4810.152	6004.4697	0.5051889419555664	2.1912271976470947
+5	['scale_params', 'flip_params', 'translate_params', 'shear_params', 'rotate_params']	1588.6249	2198.2927	0.46677303314208984	2.2682440280914307
+5	['rotate_params', 'flip_params', 'shear_params', 'translate_params', 'scale_params']	384.93674	1090.0103	0.49578118324279785	2.117210865020752
+5	['scale_params', 'flip_params', 'translate_params', 'rotate_params', 'shear_params']	416.6988	1340.4879	0.5048038959503174	2.2436790466308594
+5	['flip_params', 'translate_params', 'scale_params', 'shear_params', 'rotate_params']	335.4355	991.8776	0.5261549949645996	2.2839479446411133
+5	['rotate_params', 'scale_params', 'flip_params', 'translate_params', 'shear_params']	880.8017	1461.3619	0.6206269264221191	2.4995779991149902
+5	['translate_params', 'shear_params', 'rotate_params', 'flip_params', 'scale_params']	328.10025	1008.7015	0.514070987701416	2.3109419345855713
+5	['rotate_params', 'scale_params', 'shear_params', 'translate_params', 'flip_params']	398.95374	1077.8374	0.48656630516052246	2.2295329570770264
+5	['translate_params', 'rotate_params', 'flip_params', 'scale_params', 'shear_params']	378.0388	1046.0935	0.5797791481018066	2.1691670417785645
+5	['shear_params', 'rotate_params', 'scale_params', 'flip_params', 'translate_params']	1415.7305	2181.2925	0.48871898651123047	2.1482081413269043
+5	['translate_params', 'shear_params', 'scale_params', 'flip_params', 'rotate_params']	894.05426	1440.6112	0.48092103004455566	2.1867570877075195
