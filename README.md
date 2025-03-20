@@ -8,14 +8,17 @@ I am uploading this project as I believe it is a good reference for anyone who w
 
 #### Error Reduction in Combined Augmentations
 ![Error Reduction](./results/boxplot_mse.png)
+
 Performing all affine transformations in one step reduced the error of the augmented images when compared to the original images.
 
 #### Time Savings in Combined Augmentations
 ![Time Savings](./results/boxplot_time.png)
+
 Performing all affine transformations in one step can save time when compared to performing each affine transformation in a separate step.
 
 #### Training Results
 ![Training Results](./results/training_results_monai_transparent.png)
+
 Training the model with the combined augmentations resulted in better performance on the validation set and less overfitting to the training set.
 
 ## Main Files
